@@ -3,14 +3,14 @@ local M = {}
 M.clients_lsp = function ()
   local clients = vim.lsp.get_active_clients()
   if next(clients) == nil then
-    return ''
+    return 'LSP Stopped'
   end
 
   local c = {}
   for _, client in pairs(clients) do
     table.insert(c, client.name)
   end
-  return '\u{f085} ' .. table.concat(c, '|')
+  return '\u{f085} ' .. table.concat(c, ' | ')
 end
 
 
@@ -31,7 +31,7 @@ M.on_attach = function(_, bufnr)
     vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
   end
 
-  nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
+  nmap('<leader>cn', vim.lsp.buf.rename, '[C]ode Re[n]ame')
   nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
   nmap('<leader>cf', vim.lsp.buf.format, '[C]ode [F]ormat')
 
