@@ -1,7 +1,7 @@
 local util = require("util")
 
 return {
-    {
+  {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
     dependencies = {
@@ -11,12 +11,12 @@ return {
     opts = {
       options = {
         icons_enabled = true,
-        theme = 'tokyonight',
+        theme = 'rose-pine',
         component_separators = '|',
         section_separators = '',
       },
       sections = {
-        lualine_c = {util.clients_lsp, "filename"},
+        lualine_b = { util.clients_lsp, 'branch', 'diff', 'diagnostics' },
       },
     },
   },
