@@ -7,10 +7,4 @@ return {
       vim.cmd.colorscheme 'rose-pine'
     end,
   },
-
-  {
-    'folke/tokyonight.nvim',
-    name = 'tokyonight',
-    priority = 1000,
-  },
 }
