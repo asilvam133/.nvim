@@ -19,6 +19,7 @@ local servers = {
       telemetry = { enable = false },
     },
   },
+  yamlls = {},
 }
 
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
