@@ -1,4 +1,5 @@
-require('after.colorscheme')
+-- Here it goes the specific colorscheme. It's best to change specific things about the scheme
+require('after.rose-pine')
 require('after.telescope')
 require('after.treesitter')
 require('after.which-key')
@@ -10,3 +11,4 @@ require('after.mini')
 require('after.rust-tools')
 require('after.scala')
 require('after.git-worktree')
+require('after.neogit')
