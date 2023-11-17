@@ -5,7 +5,6 @@ vim.g.maplocalleader = ' '
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 
-vim.o.cursorline = true
 vim.o.expandtab = true
 vim.o.shiftround = true
 vim.o.shiftwidth = 2
