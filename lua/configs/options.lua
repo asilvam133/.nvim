@@ -42,3 +42,6 @@ vim.o.completeopt = 'menu,menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
+
+-- Remove 'fillchars'
+vim.api.nvim_command('set fillchars=eob:\\ ')
