@@ -1,6 +1,6 @@
 local M = {}
 -- LSP clients attached to buffer
-M.clients_lsp = function ()
+M.clients_lsp = function()
   local clients = vim.lsp.get_active_clients()
   if next(clients) == nil then
     return 'LSP Stopped'
