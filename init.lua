@@ -25,6 +25,9 @@ require('lazy').setup({
     { import = 'plugins' },
     { import = 'plugins.languages' },
   },
+  defaults = {
+    lazy = true,
+  },
 }, {})
 
 -- Load plugins extended configurations
