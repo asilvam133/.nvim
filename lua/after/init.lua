@@ -1,7 +1,6 @@
 -- Here it goes the specific colorscheme. It's best to change specific things about the scheme
 require('after.telescope')
 require('after.treesitter')
-require('after.which-key')
 require('after.mason')
 require('after.cmp')
 require('after.mini')
