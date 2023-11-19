@@ -2,6 +2,5 @@
 require('after.telescope')
 require('after.treesitter')
 require('after.mason')
-require('after.cmp')
 require('after.rust-tools')
 require('after.scala')
