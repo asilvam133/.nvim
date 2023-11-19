@@ -1,9 +1,3 @@
--- mini pairs
-require('mini.pairs').setup()
-
--- mini surround
-require('mini.surround').setup()
-
 -- mini ai
 require('mini.ai').setup((function()
   local ai = require("mini.ai")
