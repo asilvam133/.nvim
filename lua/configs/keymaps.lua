@@ -4,6 +4,7 @@
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', '<esc>', '<cmd>noh<cr>', { silent = true })
+vim.keymap.set('n', '<C-L>', '<cmd>noh<cr>', { silent = true })
 vim.keymap.set('n', '<leader>v', '<cmd>Ex<cr>', { desc = 'Project [V]iew' })
 vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>', { desc = '[L]azy UI' })
 
