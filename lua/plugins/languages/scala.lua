@@ -2,7 +2,7 @@ return {
   {
     'scalameta/nvim-metals',
     dependencies = { 'nvim-lua/plenary.nvim', 'mfussenegger/nvim-dap' },
-    config = function()
+    init = function()
       local util = require('util')
 
       -- scala
@@ -64,11 +64,11 @@ return {
         end,
         group = nvim_metals_group,
       })
+      vim.keymap.set('n', '<leader>csa', function() require('metals').new_scala_file() end, { desc = 'New Scala file' })
+      vim.keymap.set('n', '<leader>csr', function() require('metals').restart_metals() end, { desc = 'Restart Metals' })
     end,
     keys = {
       { '<leader>cs<space>', function() require('telescope').extensions.metals.commands() end, mode = 'n', desc = 'Commands' },
-      { '<leader>csa',       function() require('metals').new_scala_file() end,                mode = 'n', desc = 'New Scala file' },
-      { '<leader>csr',       function() require('metals').restart_metals() end,                mode = 'n', desc = 'Restart Metals' },
     },
   },
   {
