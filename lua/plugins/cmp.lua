@@ -14,34 +14,53 @@ return {
     -- Adds a number of user-friendly snippets
     'rafamadriz/friendly-snippets',
   },
-  config = function()
-    local cmp = require 'cmp'
-    local luasnip = require 'luasnip'
+  opts = function()
+    local cmp = require('cmp')
+    local luasnip = require('luasnip')
+    local defaults = require("cmp.config.default")()
     require('luasnip.loaders.from_vscode').lazy_load()
     luasnip.config.setup {}
 
-    cmp.setup {
+    return {
+      completion = {
+        completeopt = "menu,menuone,noinsert",
+      },
       snippet = {
         expand = function(args)
-          luasnip.lsp_expand(args.body)
+          require("luasnip").lsp_expand(args.body)
         end,
       },
-      mapping = cmp.mapping.preset.insert {
+      mapping = cmp.mapping.preset.insert({
         ['<C-n>'] = cmp.mapping.select_next_item(),
         ['<C-p>'] = cmp.mapping.select_prev_item(),
         ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        ['<C-u>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete {},
         ['<C-y>'] = cmp.mapping.confirm {
           behavior = cmp.ConfirmBehavior.Replace,
           select = true,
+        }
+      }),
+      sources = cmp.config.sources({
+        { name = "nvim_lsp" },
+        { name = "luasnip" },
+        { name = "path" },
+      }, {
+        { name = "buffer" },
+      }),
+      experimental = {
+        ghost_text = {
+          hl_group = "CmpGhostText",
         },
       },
-      sources = {
-        { name = 'nvim_lsp' },
-        { name = 'luasnip' },
-        { name = 'path'},
-      },
+      sorting = defaults.sorting,
     }
   end,
+---@param opts cmp.ConfigSchema
+    config = function(_, opts)
+      for _, source in ipairs(opts.sources) do
+        source.group_index = source.group_index or 1
+      end
+      require("cmp").setup(opts)
+    end,
 }
