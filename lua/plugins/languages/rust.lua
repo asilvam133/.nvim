@@ -1,4 +1,13 @@
 return {
+  {
+    'folke/which-key.nvim',
+    optional = true,
+    opts = {
+      defaults = {
+        ['<leader>cr'] = { name = '+[R]ust' },
+      },
+    },
+  },
   -- Extend auto completion
   {
     'hrsh7th/nvim-cmp',
@@ -70,24 +79,6 @@ return {
               ]])
           end,
         },
-        server = {
-          on_attach = function(_, bufnr)
-            -- Hover actions
-            vim.keymap.set('n', 'K', require('rust-tools').hover_actions.hover_actions,
-              { buffer = bufnr, desc = 'Rust: Hover Documentation' })
-            -- Code action groups
-            vim.keymap.set('n', '<Leader>ca', require('rust-tools').code_action_group.code_action_group,
-              { buffer = bufnr, desc = 'Rust: [C]ode [A]ction' })
-            -- Inlay hints
-            vim.keymap.set('n', '<leader>cri', require('rust-tools').inlay_hints.enable,
-              { buffer = bufnr, desc = 'Rust: Enable [I]nlay Hints' })
-            vim.keymap.set('n', '<leader>crd', require('rust-tools').inlay_hints.disable,
-              { buffer = bufnr, desc = 'Rust: [D]isable inlay hints' })
-            -- Runnables
-            vim.keymap.set('n', '<leader>crr', require('rust-tools').runnables.runnables,
-              { buffer = bufnr, desc = 'Rust: [R]unnables' })
-          end,
-        }
       }
     end,
     config = function() end,
@@ -101,8 +92,8 @@ return {
         rust_analyzer = {
           keys = {
             { 'K',          '<cmd>RustHoverActions<cr>', desc = 'Hover Actions (Rust)' },
-            { '<leader>cR', '<cmd>RustCodeAction<cr>',   desc = 'Code Action (Rust)' },
-            { '<leader>dr', '<cmd>RustDebuggables<cr>',  desc = 'Run Debuggables (Rust)' },
+            { '<leader>ca', '<cmd>RustCodeAction<cr>',   desc = 'Rust: [C]ode [A]ction' },
+            { '<leader>crr', '<cmd>RustDebuggables<cr>',  desc = 'Rust: Run debuggables' },
           },
           settings = {
             ['rust-analyzer'] = {
