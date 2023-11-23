@@ -9,6 +9,7 @@ return {
   },
   opts = {
     servers = {
+      bashls = {},
       lua_ls = {
         Lua = {
           workspace = { checkThirdParty = false },
