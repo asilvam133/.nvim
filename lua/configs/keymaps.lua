@@ -28,8 +28,11 @@ vim.keymap.set('x', '<C-p>', [["_d"+P]], { desc = 'Paste from system clipboard' 
 vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]], { desc = 'Yank selection to system clipboard' })
 vim.keymap.set('x', '<leader>Y', [["+Y]], { desc = 'Yank rest of line to system clipboard' })
 
+-- Fix cursorline keybinding
+vim.keymap.set('n', 'zv', '<cmd>set cursorline!<cr>', { desc = 'Show cursor line' })
+
 -- Next occurrence, center view and show cursor line
-vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Next occurence and center view' })
+vim.keymap.set('n', 'n', 'nzz<cmd>set cursorline<cr>', { desc = 'Next occurence and center view' })
 
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
