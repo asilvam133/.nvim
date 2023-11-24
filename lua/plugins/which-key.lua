@@ -6,7 +6,6 @@ return {
     defaults = {
       ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
       ['<leader>cr'] = { name = '[R]ust', _ = 'which_key_ignore' },
-      ['<leader>d'] = { name = '[D]ebug', _ = 'which_key_ignore' },
       ['<leader>f'] = { name = '[F]ile', _ = 'which_key_ignore' },
       ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
       ['<leader>h'] = { name = 'More git', _ = 'which_key_ignore' },
