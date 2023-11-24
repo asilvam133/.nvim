@@ -9,9 +9,8 @@ vim.keymap.set('n', '<leader>v', '<cmd>Ex<cr>', { desc = 'Project [V]iew' })
 vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>', { desc = '[L]azy UI' })
 
 -- Moves selection up and down
-vim.keymap.set('v', 'K', ':m -2<cr>gv', { desc = 'Move selection up one line' })
-vim.keymap.set('v', 'J', ':m +1<cr>gv', { desc = 'Move selection down one line' })
-
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = 'Move selection one line down' })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = 'Move selection one line up' })
 
 -- Scroll and center view
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Scroll down and center view' })
@@ -19,7 +18,7 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Scroll up and center view' })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Scroll up and center view' })
 
 -- Paste on selection and keep register
-vim.keymap.set('x', '<leader>p', [["_dP]], {desc = 'Paste and keep register'})
+vim.keymap.set('x', '<leader>p', [["_dP]], { desc = 'Paste and keep register' })
 
 -- Paste from system clipboard
 vim.keymap.set('n', '<C-p>', [["+P]], { desc = 'Paste from system clipboard' })
@@ -41,4 +40,3 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous dia
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
-
