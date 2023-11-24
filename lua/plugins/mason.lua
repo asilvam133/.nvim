@@ -5,6 +5,7 @@ return {
   build = ':MasonUpdate',
   opts = {
     ensure_installed = {
+      'codelldb',
       'stylua',
       'yamlfmt',
     },
