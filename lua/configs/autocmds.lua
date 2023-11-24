@@ -9,3 +9,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
+
+local trailing_whitespaces_group = vim.api.nvim_create_augroup('TrailingWhitespaces', { clear = true })
+vim.api.nvim_create_autocmd("BufWritePre", {
+    group = trailing_whitespaces_group,
+    pattern = "*",
+    command = [[%s/\s\+$//e]],
+})
