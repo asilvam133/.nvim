@@ -14,10 +14,7 @@ return {
       vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
       vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
       vim.api.nvim_set_hl(0, 'String', { fg = p.rose })
-      vim.api.nvim_set_hl(0, 'Number', { fg = p.rose })
-      vim.api.nvim_set_hl(0, 'Float', { fg = p.rose })
       vim.api.nvim_set_hl(0, 'Constant', { fg = p.rose })
-      vim.api.nvim_set_hl(0, 'Character', { fg = p.rose })
     end,
   },
 }
