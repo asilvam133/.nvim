@@ -14,7 +14,7 @@ return {
     },
     sections = {
       lualine_b = { util.clients_lsp, 'branch', 'diff', 'diagnostics' },
-      lualine_c = { 'lsp_progress' },
+      lualine_c = { 'filename', 'lsp_progress' },
     },
   },
 }
