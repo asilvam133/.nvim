@@ -2,7 +2,7 @@ return {
   {
     'rose-pine/neovim',
     name = 'rose-pine',
-    lazy = false,
+    -- lazy = false,
     priority = 1000,
     opts = function()
       local lighter_gold = "#DFBCAB"
@@ -27,17 +27,27 @@ return {
           CmpItemKindSnippet = { fg = lighter_gold },
           DapUIThread = { fg = lighter_gold },
           DapUIBreakpointsCurrentLine = { fg = lighter_gold },
-          TelescopeBorder =  { fg = 'highlight_high', bg = 'none'},
-          TelescopeNormal =  { bg = 'none'},
-          TelescopePromptNormal =  { bg = 'base'},
-          TelescopeResultNormal =  { fg = 'subtle', bg = 'none'},
-          TelescopeSelection =  { fg = 'text', bg = 'base'},
+          TelescopeBorder = { fg = 'highlight_high', bg = 'none' },
+          TelescopeNormal = { bg = 'none' },
+          TelescopePromptNormal = { bg = 'base' },
+          TelescopeResultNormal = { fg = 'subtle', bg = 'none' },
+          TelescopeSelection = { fg = 'text', bg = 'base' },
         },
       }
     end,
-    config = function(_, opts)
-      require('rose-pine').setup(opts)
-      vim.cmd.colorscheme('rose-pine')
-    end,
+    -- config = function(_, opts)
+    --   require('rose-pine').setup(opts)
+    --   vim.cmd.colorscheme('rose-pine')
+    -- end,
   },
+  {
+    'shaunsingh/nord.nvim',
+    name = 'nord',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.g.nord_disable_background = true
+      require('nord').set()
+    end
+  }
 }
