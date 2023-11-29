@@ -4,7 +4,7 @@ return {
   dependencies = {
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
-    { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} },
+    'arkav/lualine-lsp-progress',
     'folke/neodev.nvim',
   },
   opts = {

@@ -5,17 +5,18 @@ return {
   event = 'VeryLazy',
   dependencies = {
     'nvim-tree/nvim-web-devicons',
-    lazy = true,
+    'arkav/lualine-lsp-progress',
   },
   opts = {
     options = {
       icons_enabled = true,
-      theme = 'rose-pine',
+      theme = 'auto',
       component_separators = '|',
       section_separators = '',
     },
     sections = {
       lualine_b = { util.clients_lsp, 'branch', 'diff', 'diagnostics' },
+      lualine_c = { 'lsp_progress' },
     },
   },
 }
