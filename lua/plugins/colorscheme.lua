@@ -5,7 +5,11 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-        disable_background = true,
+      disable_background = true,
+      highlight_groups = {
+        Normal = { bg = 'none' },
+        NormalFloat = { bg = 'none' },
+      }
     },
     config = function(_, opts)
       require('rose-pine').setup(opts)
