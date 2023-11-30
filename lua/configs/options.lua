@@ -29,9 +29,6 @@ vim.o.undofile = true
 -- Turn wrap off
 vim.o.wrap = false
 
--- CMD Height
-vim.o.cmdheight = 2
-
 -- Case-insensitive searching UNLESS \C or capital in search
 vim.o.ignorecase = true
 vim.o.smartcase = true
