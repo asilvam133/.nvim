@@ -4,7 +4,7 @@
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', '<C-f>', '<Nop>', { silent = true })
-vim.keymap.set('n', '<C-L>', '<cmd>noh<cr>', { silent = true })
+vim.keymap.set('n', '<esc>', '<cmd>noh<cr>', { silent = true })
 vim.keymap.set('n', '<leader>v', '<cmd>Ex<cr>', { desc = 'Project [V]iew' })
 vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>', { desc = '[L]azy UI' })
 
@@ -34,6 +34,7 @@ vim.keymap.set('n', 'zv', '<cmd>set cursorline!<cr>', { desc = 'Show cursor line
 -- Next occurrence, center view and show cursor line
 vim.keymap.set('c', '<cr>', function() return vim.fn.getcmdtype() == '/' and '<CR>zzzv' or '<cr>' end, { expr = true })
 vim.keymap.set('n', 'n', 'nzz<cmd>set cursorline<cr>', { desc = 'Next occurence and center view' })
+vim.keymap.set('n', '*', '*zz', { desc = 'Fast search word and center view' })
 
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
