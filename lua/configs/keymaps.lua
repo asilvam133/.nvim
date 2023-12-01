@@ -32,6 +32,7 @@ vim.keymap.set('x', '<leader>Y', [["+Y]], { desc = 'Yank rest of line to system 
 vim.keymap.set('n', 'zv', '<cmd>set cursorline!<cr>', { desc = 'Show cursor line' })
 
 -- Next occurrence, center view and show cursor line
+vim.keymap.set('c', '<cr>', function() return vim.fn.getcmdtype() == '/' and '<CR>zzzv' or '<cr>' end, { expr = true })
 vim.keymap.set('n', 'n', 'nzz<cmd>set cursorline<cr>', { desc = 'Next occurence and center view' })
 
 -- Remap for dealing with word wrap
