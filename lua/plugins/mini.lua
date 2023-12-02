@@ -5,6 +5,11 @@ return {
     opts = {}
   },
   {
+    'echasnovski/mini.surround',
+    event = 'VeryLazy',
+    opts = {}
+  },
+  {
     'echasnovski/mini.ai',
     event = 'VeryLazy',
     opts = function()
