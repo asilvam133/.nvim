@@ -86,12 +86,6 @@ return {
       desc = '[/] Fuzzily search in current buffer',
     },
     {
-      '<leader>gf',
-      require('telescope.builtin').git_files,
-      mode = 'n',
-      desc = 'Search [G]it [F]iles',
-    },
-    {
       '<leader>sf',
       require('telescope.builtin').find_files,
       mode = 'n',
@@ -132,6 +126,12 @@ return {
       require('telescope.builtin').resume,
       mode = 'n',
       desc = '[S]earch [R]esume',
+    },
+    {
+      '<leader>sa',
+      require('telescope.builtin').git_status,
+      mode = 'n',
+      desc = '[S]earch Git changes',
     },
   },
 }

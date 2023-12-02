@@ -8,8 +8,8 @@ return {
   },
   opts = {},
   keys = {
-    { '<leader>go', function() require('neogit').open() end, mode = 'n', desc = '[G]it [O]pen' },
+    { '<leader>g<space>', function() require('neogit').open() end, mode = 'n', desc = '[G]it Open' },
     { '<leader>gc', function() require('neogit').open({ 'commit' }) end, mode = 'n', desc = '[G]it [C]ommit' },
-    { '<leader>gs', function() require('neogit').open({ kind = 'split' }) end, mode = 'n', desc = '[G]it Split View' },
+    { '<leader>gs', function() require('neogit').open({ kind = 'split' }) end, mode = 'n', desc = '[G]it Open ([S]plit)' },
   },
 }
