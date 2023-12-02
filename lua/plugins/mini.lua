@@ -1,5 +1,10 @@
 return {
   {
+    'echasnovski/mini.pairs',
+    event = 'VeryLazy',
+    opts = {}
+  },
+  {
     'echasnovski/mini.ai',
     event = 'VeryLazy',
     opts = function()
