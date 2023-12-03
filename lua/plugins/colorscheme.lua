@@ -41,6 +41,10 @@ return {
           NavicIconsObject = { fg = p.rose },
           NavicIconsEvent = { fg = p.rose },
           AlphaFooter = { fg = p.rose },
+          -- GitSigns
+          GitSignsAdd = { bg = 'none'},
+          GitSignsChange = { bg = 'none'},
+          GitSignsDelete = { bg = 'none'},
         },
       }
     end,
