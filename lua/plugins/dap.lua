@@ -41,15 +41,16 @@ return {
     }
 
     -- Basic debugging keymaps, feel free to change to your liking!
+    vim.keymap.set('n', '<leader>db', dap.toggle_breakpoint, { desc = 'Debug: Toggle Breakpoint' })
     vim.keymap.set('n', '<leader>ds', dap.session, { desc = 'Debug: Session' })
     vim.keymap.set('n', '<leader>dc', dap.continue, { desc = 'Debug: Start/Continue' })
+    vim.keymap.set('n', '<leader>dt', dap.terminate, { desc = 'Debug: Start/Continue' })
     vim.keymap.set('n', '<leader>di', dap.step_into, { desc = 'Debug: Step Into' })
     vim.keymap.set('n', '<leader>do', dap.step_over, { desc = 'Debug: Step Over' })
     vim.keymap.set('n', '<leader>dj', dap.step_out, { desc = 'Debug: Step Out' })
-    vim.keymap.set('n', '<leader>db', dap.toggle_breakpoint, { desc = 'Debug: Toggle Breakpoint' })
-    vim.keymap.set('n', "<leader>dj", function() require("dap").down() end, { desc = "Debug: Go one line down" })
-    vim.keymap.set('n', "<leader>dk", function() require("dap").up() end, { desc = "Debug: Go one line up" })
-    vim.keymap.set('n', "<leader>dk", function() require("dap").repl.toggle() end, { desc = "Debug: Toggle REPL" })
+    vim.keymap.set('n', "<leader>dj", function() require("dap").down() end, { desc = "Debug: Up one line down" })
+    vim.keymap.set('n', "<leader>dk", function() require("dap").up() end, { desc = "Debug: Down one line up" })
+    vim.keymap.set('n', "<leader>dr", function() require("dap").repl.toggle() end, { desc = "Debug: Toggle REPL" })
     vim.keymap.set('n', '<leader>dB', function()
       dap.set_breakpoint(vim.fn.input 'Breakpoint condition: ')
     end, { desc = 'Debug: Set Breakpoint' })
