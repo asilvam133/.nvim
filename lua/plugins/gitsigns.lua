@@ -13,7 +13,7 @@ return {
     on_attach = function(bufnr)
       vim.keymap.set('n', '<leader>gp', require('gitsigns').preview_hunk, { buffer = bufnr, desc = '[G]it: [P]review hunk' })
       vim.keymap.set('n', '<leader>gs', require('gitsigns').stage_buffer, { buffer = bufnr, desc = '[G]it: [S]tage buffer' })
-      vim.keymap.set('n', '<leader>gh', require('gitsigns').stage_hunk, { buffer = bufnr, desc = '[G]it: [S]tage hunk' })
+      vim.keymap.set('n', '<leader>gh', require('gitsigns').stage_hunk, { buffer = bufnr, desc = '[G]it: Stage [H]unk' })
 
       -- don't override the built-in and fugitive keymaps
       local gs = package.loaded.gitsigns
