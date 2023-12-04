@@ -4,7 +4,16 @@ return {
   dependencies = {
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
-    'arkav/lualine-lsp-progress',
+    {
+      'j-hui/fidget.nvim',
+      opts = {
+        progress = {
+          display = {
+            progress_icon = { pattern = "dots", period = 1 }
+          }
+        }
+      }
+    },
     'folke/neodev.nvim',
   },
   opts = {
