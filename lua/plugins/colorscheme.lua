@@ -2,7 +2,7 @@ return {
   {
     'rose-pine/neovim',
     name = 'rose-pine',
-    lazy = false,
+    -- lazy = false,
     priority = 1000,
     opts = function()
       local p = require('rose-pine.palette')
@@ -42,28 +42,62 @@ return {
           NavicIconsEvent = { fg = p.rose },
           AlphaFooter = { fg = p.rose },
           -- GitSigns
-          GitSignsAdd = { bg = 'none'},
-          GitSignsChange = { bg = 'none'},
-          GitSignsDelete = { bg = 'none'},
+          GitSignsAdd = { bg = 'none' },
+          GitSignsChange = { bg = 'none' },
+          GitSignsDelete = { bg = 'none' },
         },
       }
     end,
-    config = function(_, opts)
-      require('rose-pine').setup(opts)
-      vim.cmd.colorscheme('rose-pine')
-    end,
+    -- config = function(_, opts)
+    --   require('rose-pine').setup(opts)
+    --   vim.cmd.colorscheme('rose-pine')
+    -- end,
   },
   {
     'catppuccin/nvim',
     name = 'catppuccin',
-    -- lazy = false,
+    lazy = false,
     priority = 1000,
     opts = {
-      transparent_background = true,
+      flavour = 'mocha',
+      no_italic = true,
+      dim_inactive = {
+        enabled = true,
+        shade = "dark",
+        percentage = 0.15,
+      },
+      transparent_background = false,
+      term_colors = false,
+      integrations = {
+        treesitter = true,
+        native_lsp = {
+          enabled = true,
+          underlines = {
+            errors = { "underline" },
+            hints = { "underline" },
+            warnings = { "underline" },
+            information = { "underline" },
+          },
+        },
+        cmp = true,
+        gitsigns = true,
+        telescope = true,
+        dap = {
+          enabled = true,
+          enable_ui = true,
+        },
+        which_key = true,
+        neogit = false,
+        markdown = true,
+      },
+      custom_highlights = {
+        CursorLine = { bg = "#292c3c" },
+        CursorColumn = { bg = "#292c3c" },
+      },
     },
-    -- config = function(_, opts)
-    --   require('catppuccin').setup(opts)
-    --   vim.cmd.colorscheme('catppuccin-mocha')
-    -- end,
-  }
+    config = function(_, opts)
+      require('catppuccin').setup(opts)
+      vim.cmd.colorscheme('catppuccin')
+    end,
+  },
 }
