@@ -31,6 +31,7 @@ return {
 
     local register_capability = vim.lsp.handlers['client/registerCapability']
 
+    -- TODO: See how to fix this warning or at least disable it
     vim.lsp.handlers['client/registerCapability'] = function(err, res, ctx)
       local ret = register_capability(err, res, ctx)
       local client_id = ctx.client_id
