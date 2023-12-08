@@ -18,11 +18,13 @@ return {
         i = {
           ['<C-u>'] = false,
           ['<C-d>'] = false,
+          ['<C-h>'] = "which_key",
         },
-      },
+      }
     },
   },
-  config = function()
+  config = function(_, opts)
+    require('telescope').setup(opts)
     pcall(require('telescope').load_extension, 'fzf')
 
     -- Telescope live_grep in git root
@@ -64,56 +66,22 @@ return {
   end,
   keys = {
     {
-      '<leader>?',
-      require('telescope.builtin').oldfiles,
+      '<leader>/',
+      require('telescope.builtin').find_files,
       mode = 'n',
-      desc = '[?] Find recently opened files',
+      desc = 'Search Files',
     },
     {
       '<leader><space>',
-      require('telescope.builtin').buffers,
-      mode = 'n',
-      desc = '[ ] Find existing buffers',
-    },
-    {
-      '<leader>/',
-      function()
-        require('telescope.builtin').current_buffer_fuzzy_find(
-          require('telescope.themes').get_dropdown({ winblend = 10, previewer = false })
-        )
-      end,
-      mode = 'n',
-      desc = '[/] Fuzzily search in current buffer',
-    },
-    {
-      '<leader>sf',
-      require('telescope.builtin').find_files,
-      mode = 'n',
-      desc = '[S]earch [F]iles',
-    },
-    {
-      '<leader>sh',
-      require('telescope.builtin').help_tags,
-      mode = 'n',
-      desc = '[S]earch [H]elp',
-    },
-    {
-      '<leader>sw',
-      require('telescope.builtin').grep_string,
-      mode = 'n',
-      desc = '[S]earch current [W]ord',
-    },
-    {
-      '<leader>sg',
       require('telescope.builtin').live_grep,
       mode = 'n',
-      desc = '[S]earch by [G]rep',
+      desc = 'Search content',
     },
     {
-      '<leader>sG',
-      ':LiveGrepGitRoot<cr>',
+      '<leader>sb',
+      require('telescope.builtin').buffers,
       mode = 'n',
-      desc = '[S]earch by [G]rep on Git Root',
+      desc = '[S]earch existing [B]uffers',
     },
     {
       '<leader>sd',
@@ -122,16 +90,40 @@ return {
       desc = '[S]earch [D]iagnostics',
     },
     {
+      '<leader>sg',
+      require('telescope.builtin').git_status,
+      mode = 'n',
+      desc = '[S]earch [G]it changes',
+    },
+    {
+      '<leader>sG',
+      ':LiveGrepGitRoot<cr>',
+      mode = 'n',
+      desc = '[S]earch by [G]rep on Git Root',
+    },
+    {
+      '<leader>sh',
+      require('telescope.builtin').help_tags,
+      mode = 'n',
+      desc = '[S]earch [H]elp',
+    },
+    {
+      '<leader>sk',
+      require('telescope.builtin').keymaps,
+      mode = 'n',
+      desc = '[S]earch [K]eymaps',
+    },
+    {
       '<leader>sr',
       require('telescope.builtin').resume,
       mode = 'n',
       desc = '[S]earch [R]esume',
     },
     {
-      '<leader>sa',
-      require('telescope.builtin').git_status,
+      '<leader>sw',
+      require('telescope.builtin').grep_string,
       mode = 'n',
-      desc = '[S]earch Git changes',
+      desc = '[S]earch current [W]ord',
     },
   },
 }
