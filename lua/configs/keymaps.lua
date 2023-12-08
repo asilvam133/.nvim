@@ -17,9 +17,6 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Scroll down and center view' }
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Scroll up and center view' })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Scroll up and center view' })
 
--- Paste on selection and keep register
-vim.keymap.set('x', '<leader>p', [["_dP]], { desc = 'Paste and keep register' })
-
 -- Paste from system clipboard
 vim.keymap.set('n', '<C-p>', [["+P]], { desc = 'Paste from system clipboard' })
 vim.keymap.set('x', '<C-p>', [["_d"+P]], { desc = 'Paste from system clipboard' })
