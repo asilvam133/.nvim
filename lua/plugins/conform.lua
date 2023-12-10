@@ -1,23 +1,30 @@
 return {
-  'stevearc/conform.nvim',
-  event = { 'BufWritePre' },
-  cmd = { 'ConformInfo' },
-  opts = {
-    format = {
-      timeout_ms = 3000,
-      async = false,
-      quiet = false,
+    'stevearc/conform.nvim',
+    event = { 'BufWritePre' },
+    cmd = { 'ConformInfo' },
+    opts = {
+        format = {
+            timeout_ms = 3000,
+            async = false,
+            quiet = false,
+        },
+        formatters_by_ft = {
+            lua = { 'stylua' },
+            sh = { 'shfmt' },
+            yaml = { 'yamlfmt' },
+        },
+        formatters = {
+            injected = { options = { ignore_errors = true } },
+        },
     },
-    formatters_by_ft = {
-      lua = { 'stylua' },
-      sh = { 'shfmt' },
-      yaml = { 'yamlfmt' }
+    keys = {
+        {
+            '<leader>cc',
+            function()
+                require('conform').format({ async = true, lsp_fallback = true })
+            end,
+            mode = 'n',
+            desc = 'Conform format',
+        },
     },
-    formatters = {
-      injected = { options = { ignore_errors = true } },
-    },
-  },
-  keys = {
-    { '<leader>cc', function() require('conform').format({ async = true, lsp_fallback = true }) end, mode = 'n', desc = '[C]onform: [C]ode Format' },
-  }
 }

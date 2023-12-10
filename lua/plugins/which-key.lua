@@ -1,22 +1,20 @@
 return {
-  'folke/which-key.nvim',
-  event = 'VeryLazy',
-  opts = {
-    plugins = { spelling = true },
-    defaults = {
-      ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-      ['<leader>cr'] = { name = '[R]ust', _ = 'which_key_ignore' },
-      ['<leader>f'] = { name = '[F]ile', _ = 'which_key_ignore' },
-      ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
-      ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
-      ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-      ['<leader>q'] = { name = '[Q]uickfix', _ = 'which_key_ignore' },
-      ['<leader>u'] = { name = '[U]I', _ = 'which_key_ignore' },
-    }
-  },
-  config = function(_, opts)
-    local wk = require("which-key")
-    wk.setup(opts)
-    wk.register(opts.defaults)
-  end,
+    'folke/which-key.nvim',
+    event = 'VeryLazy',
+    opts = {
+        plugins = { spelling = true },
+        defaults = {
+            ['<leader>c'] = { name = 'Code', _ = 'which_key_ignore' },
+            ['<leader>f'] = { name = 'Find', _ = 'which_key_ignore' },
+            ['<leader>g'] = { name = 'Git', _ = 'which_key_ignore' },
+            ['<leader>h'] = { name = 'Harpoon', _ = 'which_key_ignore' },
+            ['<leader>q'] = { name = 'Quickfix', _ = 'which_key_ignore' },
+            ['<leader>w'] = { name = 'Workspace', _ = 'which_key_ignore' },
+        },
+    },
+    config = function(_, opts)
+        local wk = require('which-key')
+        wk.setup(opts)
+        wk.register(opts.defaults)
+    end,
 }
