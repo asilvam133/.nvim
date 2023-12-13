@@ -16,7 +16,9 @@ return {
         return {
             { '<leader>/', builtin.find_files, mode = 'n', desc = 'Find files' },
             { '<leader><space>', builtin.live_grep, mode = 'n', desc = 'Find using grep' },
-            { '<leader>x', builtin.diagnostics, mode = 'n', desc = 'Find diagnostics' },
+            { '<leader>fd', builtin.diagnostics, mode = 'n', desc = 'Find diagnostics' },
+            { '<leader>fr', builtin.resume, mode = 'n', desc = 'Resume search' },
+            { '<leader>fs', builtin.resume, mode = 'n', desc = 'Grep under cursor' },
             { '<leader>gg', builtin.git_status, mode = 'n', desc = 'Git: List current changes' },
         }
     end,
