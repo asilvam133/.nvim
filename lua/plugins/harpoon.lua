@@ -7,8 +7,8 @@ return {
         local ui = require('harpoon.ui')
 
         return {
-            { '<leader>he', ui.toggle_quick_menu, mode = 'n', desc = 'Harpoon: Show marks' },
-            { '<leader>h<space>', mark.add_file, mode = 'n', desc = 'Harpoon: Mark file' },
+            { '<C-e>', ui.toggle_quick_menu, mode = 'n', desc = 'Harpoon: Show marks' },
+            { '<leader>a', mark.add_file, mode = 'n', desc = 'Harpoon: Mark file' },
             {
                 '<C-h>',
                 function()
