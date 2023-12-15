@@ -23,6 +23,14 @@ return {
                 view = 'notify',
                 filter = { event = 'msg_showmode' },
             },
+            {
+                filter = {
+                    event = 'msg_show',
+                    kind = '',
+                    find = 'written',
+                },
+                opts = { skip = true },
+            },
         },
         views = {
             cmdline_popup = {
