@@ -16,9 +16,20 @@ return {
         return {
             { '<leader>/', builtin.find_files, mode = 'n', desc = 'Find files' },
             { '<leader><space>', builtin.live_grep, mode = 'n', desc = 'Find using grep' },
+            { '<leader>f<space>', builtin.resume, mode = 'n', desc = 'Resume search' },
+            {
+                '<leader>f/',
+                function()
+                    builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown({
+                        previewer = false,
+                    }))
+                end,
+                mode = 'n',
+                desc = 'Grep current buffer',
+            },
             { '<leader>fd', builtin.diagnostics, mode = 'n', desc = 'Find diagnostics' },
-            { '<leader>fr', builtin.resume, mode = 'n', desc = 'Resume search' },
-            { '<leader>fs', builtin.resume, mode = 'n', desc = 'Grep under cursor' },
+            { '<leader>fs', builtin.grep_string, mode = 'n', desc = 'Grep under cursor' },
+            { '<leader>fh', builtin.help_tags, mode = 'n', desc = 'Git: List help tags' },
             { '<leader>gg', builtin.git_status, mode = 'n', desc = 'Git: List current changes' },
         }
     end,
