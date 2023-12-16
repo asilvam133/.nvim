@@ -37,6 +37,7 @@ return {
                 },
             },
         })
+        lsp_plugin.yamlls.setup({})
 
         local builtin = require('telescope.builtin')
         vim.api.nvim_create_autocmd('LspAttach', {
