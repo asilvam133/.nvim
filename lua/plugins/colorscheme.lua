@@ -1,10 +1,10 @@
 return {
     {
         'rebelot/kanagawa.nvim',
-        enabled = false,
         lazy = false,
         priority = 1000,
         opts = {
+            transparent = true,
             overrides = function(colors)
                 local theme = colors.theme
                 return {
@@ -44,6 +44,7 @@ return {
     {
         'catppuccin/nvim',
         name = 'catppuccin',
+        enabled = false,
         lazy = false,
         priority = 1000,
         opts = {
