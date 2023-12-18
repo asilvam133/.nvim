@@ -7,8 +7,9 @@ return {
     },
     {
         'scalameta/nvim-metals',
+        ft = { 'scala', 'sbt', },
         dependencies = { 'nvim-lua/plenary.nvim', 'mfussenegger/nvim-dap' },
-        init = function()
+        config = function()
             local metals_config = require('metals').bare_config()
             metals_config.init_options.statusBarProvider = 'on'
             metals_config.settings = {
