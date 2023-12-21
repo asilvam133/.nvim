@@ -42,6 +42,8 @@ local function filename()
     return fname .. ' '
 end
 
+-- TODO: move the icons somewhere else
+local signs = { Error = ' ', Warn = ' ', Hint = ' ', Info = ' ' }
 local function lsp()
     local count = {}
     local levels = {
@@ -61,16 +63,16 @@ local function lsp()
     local info = ''
 
     if count['errors'] ~= 0 then
-        errors = ' %#LspDiagnosticsSignError# ' .. count['errors']
+        errors = ' %#LspDiagnosticsSignError#' .. signs.Error .. count['errors']
     end
     if count['warnings'] ~= 0 then
-        warnings = ' %#LspDiagnosticsSignWarning# ' .. count['warnings']
+        warnings = ' %#LspDiagnosticsSignWarning#' .. signs.Warn .. count['warnings']
     end
     if count['hints'] ~= 0 then
-        hints = ' %#LspDiagnosticsSignHint# ' .. count['hints']
+        hints = ' %#LspDiagnosticsSignHint#' .. signs.Hint .. count['hints']
     end
     if count['info'] ~= 0 then
-        info = ' %#LspDiagnosticsSignInformation# ' .. count['info']
+        info = ' %#LspDiagnosticsSignInformation#' .. signs.Info .. count['info']
     end
 
     return errors .. warnings .. hints .. info .. '%#Normal#'
