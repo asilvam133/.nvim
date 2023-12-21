@@ -97,6 +97,15 @@ local clients_lsp = function()
     return '\u{f085} ' .. table.concat(c, '|')
 end
 
+local git_branch = function()
+    local gitsigns_head = vim.b.gitsigns_head
+    if gitsigns_head == nil then
+        return ''
+    end
+
+    return '\u{f126} ' .. vim.b.gitsigns_head
+end
+
 Statusline = {}
 
 Statusline.active = function()
@@ -105,6 +114,8 @@ Statusline.active = function()
         mode(),
         '%#String# ',
         clients_lsp(),
+        '%#Constant# ',
+        git_branch(),
         '%#Function# ',
         filepath(),
         filename(),
