@@ -79,7 +79,7 @@ local function lsp()
 end
 
 local function filetype()
-    return string.format(' %s ', vim.bo.filetype):upper()
+    return string.format(' %s ', vim.bo.filetype:gsub('^%l', string.upper))
 end
 
 local clients_lsp = function()
@@ -94,7 +94,7 @@ local clients_lsp = function()
     for _, client in pairs(clients) do
         table.insert(c, client.name)
     end
-    return '\u{f085} ' .. table.concat(c, '|')
+    return ' \u{f085} ' .. table.concat(c, '|') .. ' '
 end
 
 local git_branch = function()
@@ -103,7 +103,7 @@ local git_branch = function()
         return ''
     end
 
-    return '\u{f126} ' .. vim.b.gitsigns_head
+    return ' \u{f126} ' .. vim.b.gitsigns_head .. ' '
 end
 
 Statusline = {}
@@ -112,18 +112,17 @@ Statusline.active = function()
     return table.concat({
         '%#Statusline#',
         mode(),
-        '%#String# ',
+        '%#String#',
         clients_lsp(),
-        '%#Constant# ',
+        ' %#Constant#',
         git_branch(),
-        '%#Function# ',
+        ' %#Function#',
         filepath(),
         filename(),
         '%#Normal#',
         lsp(),
         '%=%#StatusLineExtra#',
         filetype(),
-        -- lineinfo(),
     })
 end
 
