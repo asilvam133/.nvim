@@ -20,5 +20,5 @@ local conf_ft_colorscheme = vim.api.nvim_create_augroup('ConfFtColorscheme', { c
 vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
     group = conf_ft_colorscheme,
     pattern = '*.conf',
-    command = [[setf toml]],
+    command = [[setf config]],
 })
