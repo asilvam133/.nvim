@@ -13,8 +13,24 @@ return {
     },
     keys = function()
         local builtin = require('telescope.builtin')
+
         return {
-            { '<leader>/', builtin.find_files, mode = 'n', desc = 'Find files' },
+            {
+                '<leader>/',
+                function()
+                    builtin.find_files()
+                end,
+                mode = 'n',
+                desc = 'Find files',
+            },
+            {
+                '<leader>-',
+                function()
+                    builtin.find_files({ hidden = true })
+                end,
+                mode = 'n',
+                desc = 'Find files --hidden',
+            },
             { '<leader><space>', builtin.live_grep, mode = 'n', desc = 'Find using grep' },
             { '<leader>f<space>', builtin.resume, mode = 'n', desc = 'Resume search' },
             {
