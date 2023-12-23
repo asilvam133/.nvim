@@ -36,18 +36,18 @@ return {
             },
         },
         config = function(_, opts)
-            require('kanagawa').setup(opts) -- Replace this with your favorite colorscheme
-            vim.cmd.colorscheme('kanagawa-dragon') -- Replace this with your favorite colorscheme
+            require('kanagawa').setup(opts)
+            -- vim.cmd.colorscheme('kanagawa-dragon')
         end,
     },
     {
         'catppuccin/nvim',
         name = 'catppuccin',
-        enabled = false,
         lazy = false,
         priority = 1000,
         opts = {
             flavour = 'mocha',
+            transparent_background = true,
             integrations = {
                 fidget = true,
                 harpoon = true,
