@@ -45,9 +45,10 @@ return {
             },
             { '<leader>fd', builtin.diagnostics, mode = 'n', desc = 'Find diagnostics' },
             { '<leader>fs', builtin.grep_string, mode = 'n', desc = 'Grep under cursor' },
-            { '<leader>fh', builtin.help_tags, mode = 'n', desc = 'Git: List help tags' },
-            { '<leader>fb', builtin.buffers, mode = 'n', desc = 'Git: List help tags' },
-            { '<leader>gg', builtin.git_status, mode = 'n', desc = 'Git: List current changes' },
+            { '<leader>fh', builtin.help_tags, mode = 'n', desc = 'List help tags' },
+            { '<leader>fb', builtin.buffers, mode = 'n', desc = 'List buffers' },
+            { '<leader>gg', builtin.git_status, mode = 'n', desc = 'List git changes' },
+            { '<leader>uc', builtin.colorscheme, mode = 'n', desc = 'Colorschemes' },
         }
     end,
 }
