@@ -44,7 +44,7 @@ return {
         config = function() end,
         keys = {
             {
-                '<leader>b',
+                '<leader>db',
                 function()
                     require('dap').toggle_breakpoint()
                 end,
