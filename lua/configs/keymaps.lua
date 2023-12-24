@@ -14,10 +14,6 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Scroll down and center view' }
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Scroll up and center view' })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Scroll up and center view' })
 
--- Paste from system clipboard
-vim.keymap.set('n', '<C-p>', [["+P]], { desc = 'Paste from system clipboard' })
-vim.keymap.set('x', '<C-p>', [["_d"+P]], { desc = 'Paste from system clipboard' })
-
 -- Yank to system clipboard
 vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]], { desc = 'Yank selection to system clipboard' })
 vim.keymap.set('x', '<leader>Y', [["+Y]], { desc = 'Yank rest of line to system clipboard' })
