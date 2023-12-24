@@ -45,9 +45,5 @@ vim.keymap.set(
     { desc = 'Open floating diagnostic message' }
 )
 
--- [[ Quicklist Keymaps ]]
+-- Quicklist Keymaps
 vim.keymap.set('n', '<leader>qx', '<cmd>call setqflist([])<cr>', { desc = 'Quicklist: Clear' })
-vim.keymap.set('n', '<leader>q<space>', '<cmd>copen<cr>', { desc = 'Quicklist: Open' })
-vim.keymap.set('n', '<leader>qc', '<cmd>cclose<cr>', { desc = 'Quicklist: Close' })
-vim.keymap.set('n', '<leader>qn', '<cmd>cnext<cr>', { desc = 'Quicklist: Next entry' })
-vim.keymap.set('n', '<leader>qp', '<cmd>cprev<cr>', { desc = 'Quicklist: Previous entry' })
