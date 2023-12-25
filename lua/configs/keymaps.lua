@@ -1,7 +1,6 @@
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', '<C-f>', '<Nop>', { silent = true })
 vim.keymap.set('n', '<esc>', '<cmd>noh<cr>', { silent = true })
-vim.keymap.set('n', '<leader>ff', '<cmd>Ex<cr>', { desc = 'File Browser (cwd)' })
 vim.keymap.set('n', '<leader>b', '<cmd>bdelete<cr>', { desc = 'Delete buffer' })
 vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>', { desc = 'Lazy UI' })
 
