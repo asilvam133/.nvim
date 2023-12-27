@@ -21,6 +21,14 @@ vim.keymap.set('c', '<cr>', function()
 end, { expr = true })
 vim.keymap.set('n', 'n', 'nzz<cmd>set cursorline<cr>', { desc = 'Next occurence and center view' })
 
+-- Toggle wrap
+local toggle_wrap = function()
+    vim.cmd('set wrap!')
+    vim.cmd('set nolist!')
+    vim.cmd('set linebreak!')
+end
+vim.keymap.set('n', '<leader>uw', toggle_wrap, { desc = 'Toggle wrap' })
+
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
