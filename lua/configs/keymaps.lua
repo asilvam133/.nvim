@@ -8,11 +8,6 @@ vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>', { desc = 'Lazy UI' })
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move selection one line down' })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move selection one line up' })
 
--- Scroll and center view
-vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Scroll down and center view' })
-vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Scroll up and center view' })
-vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Scroll up and center view' })
-
 -- Yank to system clipboard
 vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]], { desc = 'Yank selection to system clipboard' })
 vim.keymap.set('x', '<leader>Y', [["+Y]], { desc = 'Yank rest of line to system clipboard' })
