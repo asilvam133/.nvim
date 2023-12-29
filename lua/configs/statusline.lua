@@ -111,6 +111,7 @@ Statusline = {}
 Statusline.active = function()
     return table.concat({
         '%#Statusline#',
+        '%#Identifier#',
         mode(),
         '%#String#',
         clients_lsp(),
@@ -122,6 +123,7 @@ Statusline.active = function()
         '%#Normal#',
         lsp(),
         '%=%#StatusLineExtra#',
+        '%#Identifier#',
         filetype(),
     })
 end
