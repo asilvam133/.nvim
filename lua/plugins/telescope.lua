@@ -53,28 +53,4 @@ return {
             }
         end,
     },
-    {
-        'nvim-telescope/telescope-file-browser.nvim',
-        dependencies = {
-            'nvim-telescope/telescope.nvim',
-            'nvim-lua/plenary.nvim',
-            'nvim-tree/nvim-web-devicons',
-        },
-        keys = {
-            {
-                '<leader>ff',
-                ':Telescope file_browser<CR>',
-                desc = 'File browser (cwd)',
-                noremap = true,
-                silent = true,
-            },
-            {
-                '<leader>fc',
-                ':Telescope file_browser path=%:p:h select_buffer=true<CR>',
-                desc = 'File browser (buffer path)',
-                noremap = true,
-                silent = true,
-            },
-        },
-    },
 }
