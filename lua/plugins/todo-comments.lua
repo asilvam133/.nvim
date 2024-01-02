@@ -6,10 +6,10 @@ return {
         opts = {},
         keys = {
             {
-                '<leader>ft',
+                '<leader>qt',
                 '<cmd>TodoQuickFix<cr>',
                 mode = 'n',
-                desc = 'Find Todo-Comments',
+                desc = 'Trouble: Todo-Comments',
             },
         },
     },

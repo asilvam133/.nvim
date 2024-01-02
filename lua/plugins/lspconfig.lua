@@ -126,13 +126,5 @@ return {
     end,
     keys = {
         { '<space>e', vim.diagnostic.open_float, mode = 'n', desc = 'Hover diagnostic' },
-        { '[d', vim.diagnostic.goto_prev, mode = 'n', desc = 'Previous diagnostic' },
-        { ']d', vim.diagnostic.goto_next, mode = 'n', desc = 'Next diagnostic' },
-        {
-            '<leader>q<space>',
-            vim.diagnostic.setqflist,
-            mode = 'n',
-            desc = 'Open diagnostics list',
-        },
     },
 }
