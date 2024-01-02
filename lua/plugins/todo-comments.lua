@@ -5,12 +5,11 @@ return {
         dependencies = { 'nvim-lua/plenary.nvim' },
         opts = {},
         keys = {
-            { '<leader>ft', '<cmd>TodoTelescope<cr>', mode = 'n', desc = 'Find Todo-Comments' },
             {
-                '<leader>qt',
+                '<leader>ft',
                 '<cmd>TodoQuickFix<cr>',
                 mode = 'n',
-                desc = 'Quickfix: Todo-Comments',
+                desc = 'Find Todo-Comments',
             },
         },
     },
