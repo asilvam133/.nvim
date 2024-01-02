@@ -51,6 +51,11 @@ return {
             integrations = {
                 fidget = true,
                 harpoon = true,
+                indent_blankline = {
+                    enabled = true,
+                    scope_color = 'lavander',
+                    colored_indent_levels = false,
+                },
                 neogit = false,
                 noice = true,
                 native_lsp = {
@@ -77,6 +82,7 @@ return {
                     enabled = true,
                     style = 'nvchad',
                 },
+                lsp_trouble = true,
                 which_key = true,
             },
         },

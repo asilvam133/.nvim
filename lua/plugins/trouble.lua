@@ -4,39 +4,31 @@ return {
     opts = {},
     keys = {
         {
-            '<leader>x<space>',
+            '<leader>q<space>',
             function()
-                require('trouble').toggle()
-            end,
-            mode = 'n',
-            desc = 'Trouble: Toggle',
-        },
-        {
-            '<leader>xq',
-            function()
-                require('trouble').open('quickfix')
+                require('trouble').toggle('quickfix')
             end,
             mode = 'n',
             desc = 'Trouble: Quickfix',
         },
         {
-            '<leader>xd',
+            '<leader>qd',
             function()
-                require('trouble').open('document_diagnostics')
+                require('trouble').toggle('document_diagnostics')
             end,
             mode = 'n',
             desc = 'Trouble: Diagnostics (Document)',
         },
         {
-            '<leader>xD',
+            '<leader>qw',
             function()
-                require('trouble').open('workspace_diagnostics')
+                require('trouble').toggle('workspace_diagnostics')
             end,
             mode = 'n',
             desc = 'Trouble: Diagnostics (Workspace)',
         },
         {
-            '<leader>xn',
+            ']g',
             function()
                 require('trouble').next({ skip_groups = true, jump = true })
             end,
@@ -44,7 +36,7 @@ return {
             desc = 'Trouble: Jump to next item',
         },
         {
-            '<leader>xp',
+            '[g',
             function()
                 require('trouble').previous({ skip_groups = true, jump = true })
             end,

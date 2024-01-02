@@ -3,6 +3,7 @@ return {
     event = 'VeryLazy',
     opts = {
         -- See `:help gitsigns.txt`
+        trouble = true,
         signs = {
             add = { text = '+' },
             change = { text = '~' },
