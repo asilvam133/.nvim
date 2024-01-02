@@ -6,6 +6,7 @@ vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>', { desc = 'Lazy UI' })
 
 -- Directory related bindings
 vim.keymap.set('n', '<leader>pv', '<cmd>Ex<cr>', { desc = 'Project view' })
+vim.keymap.set('n', '<leader>pc', '<cmd>e.<cr>', { desc = 'Project view' })
 
 -- Moves selection up and down
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move selection one line down' })
