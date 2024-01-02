@@ -45,6 +45,3 @@ vim.keymap.set(
     vim.diagnostic.open_float,
     { desc = 'Open floating diagnostic message' }
 )
-
--- Quicklist Keymaps
-vim.keymap.set('n', '<leader>qx', '<cmd>call setqflist([])<cr>', { desc = 'Quicklist: Clear' })
