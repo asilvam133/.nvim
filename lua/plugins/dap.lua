@@ -50,6 +50,7 @@ return {
             {
                 '<leader>db',
                 function()
+                    ---@diagnostic disable-next-line: different-requires
                     require('dap').toggle_breakpoint()
                 end,
                 mode = 'n',
@@ -58,6 +59,7 @@ return {
             {
                 '<leader>d<space>',
                 function()
+                    ---@diagnostic disable-next-line: different-requires
                     require('dap').continue()
                 end,
                 mode = 'n',
@@ -66,6 +68,7 @@ return {
             {
                 '<leader>dt',
                 function()
+                    ---@diagnostic disable-next-line: different-requires
                     require('dap').terminate()
                 end,
                 desc = 'DAP: Terminate',
@@ -73,6 +76,7 @@ return {
             {
                 '<leader>do',
                 function()
+                    ---@diagnostic disable-next-line: different-requires
                     require('dap').step_over()
                 end,
                 mode = 'n',
@@ -81,6 +85,7 @@ return {
             {
                 '<leader>di',
                 function()
+                    ---@diagnostic disable-next-line: different-requires
                     require('dap').step_into()
                 end,
                 mode = 'n',
@@ -89,6 +94,7 @@ return {
             {
                 '<leader>dx',
                 function()
+                    ---@diagnostic disable-next-line: different-requires
                     require('dap').step_out()
                 end,
                 mode = 'n',
@@ -97,6 +103,7 @@ return {
             {
                 '<Leader>dr',
                 function()
+                    ---@diagnostic disable-next-line: different-requires
                     require('dap').repl.open()
                 end,
                 mode = 'n',
@@ -105,6 +112,7 @@ return {
             {
                 '<Leader>dl',
                 function()
+                ---@diagnostic disable-next-line: different-requires
                     require('dap').run_last()
                 end,
                 mode = 'n',

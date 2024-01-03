@@ -88,6 +88,7 @@ return {
         for _, source in ipairs(opts.sources) do
             source.group_index = source.group_index or 1
         end
+        ---@diagnostic disable-next-line: different-requires
         require('cmp').setup(opts)
     end,
 }
