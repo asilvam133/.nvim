@@ -8,6 +8,10 @@ return {
             },
             opts = {},
             config = function(_, opts)
+                -- loads icons assignment
+                require('utils.dap')
+
+                ---@diagnostic disable-next-line: different-requires
                 local dap, dapui = require('dap'), require('dapui')
                 dapui.setup(opts)
                 dap.listeners.after.event_initialized['dapui_config'] = function()
