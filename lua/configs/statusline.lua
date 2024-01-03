@@ -42,8 +42,7 @@ local function filename()
     return fname .. ' '
 end
 
--- TODO: move the icons somewhere else
-local signs = { Error = ' ', Warn = ' ', Hint = ' ', Info = ' ' }
+local signs = require('utils.diagnostics').signs
 local function lsp()
     local count = {}
     local levels = {
