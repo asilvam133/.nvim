@@ -30,18 +30,50 @@ return {
         {
             '<C-j>',
             function()
-                require('trouble').next({ skip_groups = true, jump = true })
+                local trouble = require('trouble')
+
+                trouble.open('quickfix')
+
+                trouble.next({ skip_groups = true, jump = true })
             end,
             mode = 'n',
-            desc = 'Trouble: Jump to next item',
+            desc = 'Trouble: Jump to next item in quickfix list',
         },
         {
             '<C-k>',
             function()
-                require('trouble').previous({ skip_groups = true, jump = true })
+                local trouble = require('trouble')
+
+                trouble.open('quickfix')
+
+                trouble.previous({ skip_groups = true, jump = true })
             end,
             mode = 'n',
-            desc = 'Trouble: Jump to previous item',
+            desc = 'Trouble: Jump to previous item in quickfix list',
+        },
+        {
+            ']d',
+            function()
+                local trouble = require('trouble')
+
+                trouble.open('workspace_diagnostics')
+
+                trouble.next({ skip_groups = true, jump = true })
+            end,
+            mode = 'n',
+            desc = 'Trouble: Jump to next item in workspace diagnostics',
+        },
+        {
+            '[d',
+            function()
+                local trouble = require('trouble')
+
+                trouble.open('workspace_diagnostics')
+
+                trouble.previous({ skip_groups = true, jump = true })
+            end,
+            mode = 'n',
+            desc = 'Trouble: Jump to previous item in workspace diagnostics',
         },
     },
 }
