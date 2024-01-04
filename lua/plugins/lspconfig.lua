@@ -54,7 +54,7 @@ return {
                 )
                 vim.keymap.set(
                     'n',
-                    '<C-k>',
+                    '<M-k>',
                     vim.lsp.buf.signature_help,
                     { buffer = ev.buf, desc = 'Signature help' }
                 )
