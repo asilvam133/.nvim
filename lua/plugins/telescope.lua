@@ -14,13 +14,19 @@ return {
         },
         opts = function()
             -- trouble is working with everything except with the git_status picker
-            local trouble = require('trouble.providers.telescope')
+            local actions = require('telescope.actions')
 
             return {
                 defaults = {
                     mappings = {
-                        i = { ['<c-t>'] = trouble.open_with_trouble },
-                        n = { ['<c-t>'] = trouble.open_with_trouble },
+                        i = {
+                            ['<C-q>'] = actions.send_to_qflist,
+                            ['<M-q>'] = actions.send_selected_to_qflist,
+                        },
+                        n = {
+                            ['<C-q>'] = actions.send_to_qflist,
+                            ['<M-q>'] = actions.send_selected_to_qflist,
+                        },
                     },
                 },
             }

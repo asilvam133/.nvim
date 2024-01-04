@@ -28,7 +28,7 @@ return {
             desc = 'Trouble: Diagnostics (Workspace)',
         },
         {
-            ']g',
+            '<C-j>',
             function()
                 require('trouble').next({ skip_groups = true, jump = true })
             end,
@@ -36,7 +36,7 @@ return {
             desc = 'Trouble: Jump to next item',
         },
         {
-            '[g',
+            '<C-k>',
             function()
                 require('trouble').previous({ skip_groups = true, jump = true })
             end,
