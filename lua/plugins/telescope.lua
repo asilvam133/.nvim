@@ -36,7 +36,7 @@ return {
 
             return {
                 {
-                    '<leader>/',
+                    '<leader>pf',
                     function()
                         builtin.find_files()
                     end,
@@ -44,15 +44,16 @@ return {
                     desc = 'Find files',
                 },
                 {
-                    '<leader>-',
+                    '<leader>ph',
                     function()
                         builtin.find_files({ hidden = true })
                     end,
                     mode = 'n',
-                    desc = 'Find files --hidden',
+                    desc = 'Find files (hidden)',
                 },
+                { '<C-p>', builtin.git_status, mode = 'n', desc = 'List git changes' },
                 { '<leader><space>', builtin.live_grep, mode = 'n', desc = 'Find using grep' },
-                { '<leader>f<space>', builtin.resume, mode = 'n', desc = 'Resume search' },
+                { '<leader>/', builtin.resume, mode = 'n', desc = 'Resume search' },
                 {
                     '<leader>f/',
                     function()
@@ -67,8 +68,7 @@ return {
                 { '<leader>fs', builtin.grep_string, mode = 'n', desc = 'Grep under cursor' },
                 { '<leader>fh', builtin.help_tags, mode = 'n', desc = 'List help tags' },
                 { '<leader>fb', builtin.buffers, mode = 'n', desc = 'List buffers' },
-                { '<C-p>', builtin.git_status, mode = 'n', desc = 'List git changes' },
-                { '<leader>uc', builtin.colorscheme, mode = 'n', desc = 'Colorschemes' },
+                { '<leader>fk', builtin.keymaps, mode = 'n', desc = 'List keymaps' },
             }
         end,
     },
