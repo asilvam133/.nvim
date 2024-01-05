@@ -6,8 +6,8 @@ return {
         opts = {},
         keys = {
             {
-                '<leader>qt',
-                '<cmd>TodoQuickFix<cr>',
+                '<leader>pt',
+                '<cmd>TodoTelescope<cr>',
                 mode = 'n',
                 desc = 'Trouble: Todo-Comments',
             },
