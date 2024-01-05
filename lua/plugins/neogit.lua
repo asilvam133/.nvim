@@ -1,15 +1,29 @@
+-- TODO: Add ThePrimeagen Worktree plugin and add mappings inside the <leader>g group
 return {
     'NeogitOrg/neogit',
+    event = 'VeryLazy',
     dependencies = {
-        'nvim-lua/plenary.nvim', -- required
-        'nvim-telescope/telescope.nvim', -- optional
-        'sindrets/diffview.nvim', -- optional
-        'ibhagwan/fzf-lua', -- optional
+        'nvim-lua/plenary.nvim',
+        'nvim-telescope/telescope.nvim',
+        {
+            'sindrets/diffview.nvim',
+            keys = {
+                {
+                    '<leader>gd',
+                    function()
+                        require('diffview').open()
+                    end,
+                    mode = 'n',
+                    desc = 'Git diff view',
+                },
+            },
+        },
+        'ibhagwan/fzf-lua',
     },
     opts = {},
     keys = {
         {
-            '<leader>g<space>',
+            '<leader>gs',
             function()
                 require('neogit').open()
             end,
@@ -23,14 +37,6 @@ return {
             end,
             mode = 'n',
             desc = 'Git Commit',
-        },
-        {
-            '<leader>gs',
-            function()
-                require('neogit').open({ kind = 'split' })
-            end,
-            mode = 'n',
-            desc = 'Git Open (Split)',
         },
     },
 }
