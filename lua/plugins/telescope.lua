@@ -67,7 +67,7 @@ return {
                 { '<leader>fs', builtin.grep_string, mode = 'n', desc = 'Grep under cursor' },
                 { '<leader>fh', builtin.help_tags, mode = 'n', desc = 'List help tags' },
                 { '<leader>fb', builtin.buffers, mode = 'n', desc = 'List buffers' },
-                { '<leader>gg', builtin.git_status, mode = 'n', desc = 'List git changes' },
+                { '<C-p>', builtin.git_status, mode = 'n', desc = 'List git changes' },
                 { '<leader>uc', builtin.colorscheme, mode = 'n', desc = 'Colorschemes' },
             }
         end,

@@ -1,4 +1,3 @@
--- TODO: Add ThePrimeagen Worktree plugin and add mappings inside the <leader>g group
 return {
     'NeogitOrg/neogit',
     event = 'VeryLazy',
