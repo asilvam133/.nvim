@@ -16,19 +16,13 @@ return {
                 'n',
                 '<leader>gp',
                 require('gitsigns').preview_hunk,
-                { buffer = bufnr, desc = 'Git: Preview hunk' }
-            )
-            vim.keymap.set(
-                'n',
-                '<leader>gs',
-                require('gitsigns').stage_buffer,
-                { buffer = bufnr, desc = 'Git: Stage buffer' }
+                { buffer = bufnr, desc = 'Git preview hunk' }
             )
             vim.keymap.set(
                 'n',
                 '<leader>gh',
                 require('gitsigns').stage_hunk,
-                { buffer = bufnr, desc = 'Git: Stage Hunk' }
+                { buffer = bufnr, desc = 'Git stage hunk' }
             )
 
             -- don't override the built-in and fugitive keymaps
