@@ -1,7 +1,7 @@
 return {
     {
         'hrsh7th/nvim-cmp',
-        requires = {
+        dependencies = {
             { 'hrsh7th/cmp-nvim-lsp' },
         },
     },
