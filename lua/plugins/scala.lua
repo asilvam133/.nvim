@@ -7,7 +7,7 @@ return {
     },
     {
         'scalameta/nvim-metals',
-        ft = { 'scala', 'sbt', },
+        ft = { 'scala', 'sbt' },
         dependencies = { 'nvim-lua/plenary.nvim', 'mfussenegger/nvim-dap' },
         config = function()
             local metals_config = require('metals').bare_config()
@@ -51,31 +51,6 @@ return {
                     },
                 },
             }
-            vim.keymap.set('n', '<leader>csa', function()
-                require('metals').new_scala_file()
-            end, { desc = 'New Scala file' })
-            vim.keymap.set('n', '<leader>csr', function()
-                require('metals').restart_metals()
-            end, { desc = 'Restart Metals' })
         end,
-        keys = {
-            {
-                '<leader>cs<space>',
-                function()
-                    require('telescope').extensions.metals.commands()
-                end,
-                mode = 'n',
-                desc = 'Commands',
-            },
-        },
-    },
-    {
-        'folke/which-key.nvim',
-        optional = true,
-        opts = {
-            defaults = {
-                ['<leader>cs'] = { name = '+Scala' },
-            },
-        },
     },
 }
