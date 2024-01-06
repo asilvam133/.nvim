@@ -18,7 +18,14 @@ return {
 
             return {
                 defaults = {
+                    color_devicons = true,
                     layout_strategy = 'vertical',
+                    layout_config = {
+                        prompt_position = 'top',
+                        vertical = {
+                            mirror = true,
+                        },
+                    },
                     mappings = {
                         i = {
                             ['<C-q>'] = actions.send_to_qflist,
