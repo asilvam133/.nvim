@@ -37,7 +37,7 @@ return {
         },
         config = function(_, opts)
             require('kanagawa').setup(opts)
-            -- vim.cmd.colorscheme('kanagawa-dragon')
+            vim.cmd.colorscheme('kanagawa-dragon')
         end,
     },
     {
@@ -88,7 +88,7 @@ return {
         },
         config = function(_, opts)
             require('catppuccin').setup(opts)
-            vim.cmd.colorscheme('catppuccin')
+            -- vim.cmd.colorscheme('catppuccin')
         end,
     },
 }
