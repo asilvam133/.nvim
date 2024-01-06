@@ -18,6 +18,7 @@ return {
 
             return {
                 defaults = {
+                    layout_strategy = 'vertical',
                     mappings = {
                         i = {
                             ['<C-q>'] = actions.send_to_qflist,
