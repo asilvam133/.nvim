@@ -1,46 +1,59 @@
 return {
     'ThePrimeagen/harpoon',
+    branch = 'harpoon2',
     dependencies = { 'nvim-lua/plenary.nvim' },
-    event = 'VeryLazy',
-    keys = function()
-        local mark = require('harpoon.mark')
-        local ui = require('harpoon.ui')
-
-        return {
-            { '<C-e>', ui.toggle_quick_menu, mode = 'n', desc = 'Harpoon: Show marks' },
-            { '<leader>a', mark.add_file, mode = 'n', desc = 'Harpoon: Mark file' },
-            {
-                '<C-h>',
-                function()
-                    ui.nav_file(1)
-                end,
-                mode = 'n',
-                desc = 'Harpoon: Go to mark 1',
-            },
-            {
-                '<C-t>',
-                function()
-                    ui.nav_file(2)
-                end,
-                mode = 'n',
-                desc = 'Harpoon: Go to mark 2',
-            },
-            {
-                '<C-n>',
-                function()
-                    ui.nav_file(3)
-                end,
-                mode = 'n',
-                desc = 'Harpoon: Go to mark 3',
-            },
-            {
-                '<C-s>',
-                function()
-                    ui.nav_file(4)
-                end,
-                mode = 'n',
-                desc = 'Harpoon: Go to mark 4',
-            },
-        }
+    config = function()
+        require('harpoon'):setup()
     end,
+    keys = {
+        {
+            '<C-e>',
+            function()
+                local harpoon = require('harpoon')
+                harpoon.ui:toggle_quick_menu(harpoon:list())
+            end,
+            mode = 'n',
+            desc = 'Harpoon: Show marks',
+        },
+        {
+            '<leader>a',
+            function()
+                require('harpoon'):list():append()
+            end,
+            mode = 'n',
+            desc = 'Harpoon: Mark file',
+        },
+        {
+            '<C-h>',
+            function()
+                require('harpoon'):list():select(1)
+            end,
+            mode = 'n',
+            desc = 'Harpoon: Go to mark 1',
+        },
+        {
+            '<C-t>',
+            function()
+                require('harpoon'):list():select(2)
+            end,
+            mode = 'n',
+            desc = 'Harpoon: Go to mark 2',
+        },
+        {
+            '<C-n>',
+            function()
+                require('harpoon'):list():select(3)
+            end,
+            mode = 'n',
+            desc = 'Harpoon: Go to mark 3',
+        },
+        {
+            '<C-s>',
+            function()
+                require('harpoon'):list():select(4)
+            end,
+            mode = 'n',
+            desc = 'Harpoon: Go to mark 4',
+        },
+    },
 }
