@@ -30,16 +30,15 @@ return {
                 {
                     type = 'scala',
                     request = 'launch',
-                    name = 'RunOrTest',
+                    name = 'Run or test',
                     metals = {
                         runType = 'runOrTestFile',
-                        --args = { "firstArg", "secondArg", "thirdArg" }, -- here just as an example
                     },
                 },
                 {
                     type = 'scala',
                     request = 'launch',
-                    name = 'Test Target',
+                    name = 'Test build target',
                     metals = {
                         runType = 'testTarget',
                     },
