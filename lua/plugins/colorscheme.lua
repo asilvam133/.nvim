@@ -4,7 +4,6 @@ return {
         lazy = false,
         priority = 1000,
         opts = {
-            transparent = true,
             overrides = function(colors)
                 local theme = colors.theme
                 return {
@@ -37,7 +36,6 @@ return {
         },
         config = function(_, opts)
             require('kanagawa').setup(opts)
-            vim.cmd.colorscheme('kanagawa-dragon')
         end,
     },
     {
@@ -47,7 +45,7 @@ return {
         priority = 1000,
         opts = {
             flavour = 'mocha',
-            transparent_background = false,
+            transparent_background = true,
             integrations = {
                 fidget = true,
                 harpoon = true,
@@ -88,7 +86,6 @@ return {
         },
         config = function(_, opts)
             require('catppuccin').setup(opts)
-            -- vim.cmd.colorscheme('catppuccin')
         end,
     },
 }
