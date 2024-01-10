@@ -9,7 +9,7 @@ return {
             ['<leader>g'] = { name = 'Git', _ = 'which_key_ignore' },
             ['<leader>p'] = { name = 'Project', _ = 'which_key_ignore' },
             ['<leader>u'] = { name = 'UI', _ = 'which_key_ignore' },
-            ['<leader>w'] = { name = 'Workspace', _ = 'which_key_ignore' },
+            ['<leader>v'] = { name = 'View', _ = 'which_key_ignore' },
         },
     },
     config = function(_, opts)

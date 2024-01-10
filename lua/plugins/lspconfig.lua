@@ -78,21 +78,6 @@ return {
                 )
                 vim.keymap.set(
                     'n',
-                    '<space>wa',
-                    vim.lsp.buf.add_workspace_folder,
-                    { buffer = ev.buf, desc = 'Add workspace folder' }
-                )
-                vim.keymap.set(
-                    'n',
-                    '<space>wr',
-                    vim.lsp.buf.remove_workspace_folder,
-                    { buffer = ev.buf, desc = 'Remove workspace folder' }
-                )
-                vim.keymap.set('n', '<space>wl', function()
-                    print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-                end, { buffer = ev.buf, desc = 'List workspace folders' })
-                vim.keymap.set(
-                    'n',
                     '<space>D',
                     builtin.lsp_type_definitions,
                     { buffer = ev.buf, desc = 'Type definition' }
