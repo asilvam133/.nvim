@@ -26,4 +26,4 @@ require('lazy').setup({
     },
 }, {})
 
-vim.cmd.colorscheme('kanagawa-dragon')
+vim.cmd.colorscheme('rose-pine')

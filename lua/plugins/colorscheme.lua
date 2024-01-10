@@ -89,4 +89,23 @@ return {
             require('catppuccin').setup(opts)
         end,
     },
+    {
+        'rose-pine/neovim',
+        dir = '~/repos/rose-pine.nvim',
+        name = 'rose-pine',
+        lazy = false,
+        opts = {
+            styles = {
+                transparency = true,
+            },
+            highlight_groups = {
+                TelescopeTitle = { fg = 'base', bg = 'love' },
+                TelescopePromptTitle = { fg = 'base', bg = 'pine' },
+                TelescopePreviewTitle = { fg = 'base', bg = 'iris' },
+            },
+        },
+        config = function(_, opts)
+            require('rose-pine').setup(opts)
+        end,
+    },
 }
