@@ -1,6 +1,9 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+--netrw
+vim.g.netrw_sort_sequence = [[[\/]$,*]] -- directories first
+
 vim.o.expandtab = true
 vim.o.shiftround = true
 vim.o.shiftwidth = 4
