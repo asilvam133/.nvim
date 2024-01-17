@@ -9,7 +9,7 @@ vim.o.shiftround = true
 vim.o.shiftwidth = 4
 vim.o.tabstop = 4
 vim.o.showmode = false
-vim.o.guicursor = ""
+vim.o.guicursor = ''
 vim.o.cursorline = true
 vim.o.colorcolumn = '100'
 
@@ -20,6 +20,8 @@ vim.wo.relativenumber = true
 
 vim.o.mouse = 'a'
 
+vim.o.guioptions = 'e'
+vim.o.sessionoptions = 'tabpages,globals'
 vim.o.breakindent = true
 
 vim.o.undofile = true
