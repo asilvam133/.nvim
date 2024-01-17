@@ -23,8 +23,7 @@ return {
                 { 'fancy_diff' },
             },
             lualine_c = {
-                { 'fancy_cwd', substitute_home = true },
-                { 'filename', path = 1 },
+                { 'filename' },
             },
             lualine_x = {
                 { 'fancy_macro' },
