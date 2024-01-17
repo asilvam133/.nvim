@@ -19,7 +19,7 @@ return {
             return {
                 defaults = {
                     color_devicons = true,
-                    layout_strategy = 'vertical',
+                    layout_strategy = 'flex',
                     layout_config = {
                         prompt_position = 'top',
                         vertical = {
