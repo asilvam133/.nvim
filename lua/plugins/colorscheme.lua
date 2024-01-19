@@ -90,8 +90,7 @@ return {
         end,
     },
     {
-        'rose-pine/neovim',
-        dir = '~/repos/rose-pine.nvim',
+        'asilvam133/rose-pine.nvim',
         name = 'rose-pine',
         lazy = false,
         opts = {
