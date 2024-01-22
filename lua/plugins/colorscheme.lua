@@ -96,6 +96,7 @@ return {
         opts = {
             styles = {
                 transparency = true,
+                italic = false,
             },
             highlight_groups = {
                 TelescopeTitle = { fg = 'base', bg = 'love' },
