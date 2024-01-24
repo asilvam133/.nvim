@@ -56,6 +56,7 @@ return {
                     require('luasnip').lsp_expand(args.body)
                 end,
             },
+            --TODO: Change to LSP Kind (youtube Devops tools)
             formatting = formatting_style,
             mapping = cmp.mapping.preset.insert({
                 ['<C-n>'] = cmp.mapping.select_next_item(),
