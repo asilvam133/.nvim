@@ -65,7 +65,7 @@ return {
                 {
                     '<leader>pf',
                     function()
-                        builtin.find_files({ path_display = { 'smart' } })
+                        builtin.find_files({ path_display = { 'shorten' } })
                     end,
                     mode = 'n',
                     desc = 'Project files',
