@@ -1,3 +1,4 @@
+-- TODO: Change keybindings to make sense with QWERTY
 return {
     'ThePrimeagen/harpoon',
     branch = 'harpoon2',

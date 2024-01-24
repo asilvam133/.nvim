@@ -47,11 +47,25 @@ return {
                 { '<C-p>', builtin.git_status, mode = 'n', desc = 'Git changes' },
                 { '<leader>vh', builtin.help_tags, mode = 'n', desc = 'Help tags' },
                 { '<leader>vb', builtin.buffers, mode = 'n', desc = 'Buffers' },
-                { '<leader>pw', builtin.grep_string, mode = 'n', desc = 'Project word under cursor' },
+                {
+                    '<leader>pw',
+                    builtin.grep_string,
+                    mode = 'n',
+                    desc = 'Search word under cursor',
+                },
+                {
+                    '<leader>pW',
+                    function()
+                        local word = vim.fn.expand('<cWORD>')
+                        builtin.grep_string({ search = word })
+                    end,
+                    mode = 'n',
+                    desc = 'Search WORD under cursor',
+                },
                 {
                     '<leader>pf',
                     function()
-                        builtin.find_files()
+                        builtin.find_files({ path_display = { 'smart' } })
                     end,
                     mode = 'n',
                     desc = 'Project files',
@@ -63,15 +77,6 @@ return {
                     end,
                     mode = 'n',
                     desc = 'Project search',
-                },
-                {
-                    '<leader>pW',
-                    function()
-                        local word = vim.fn.expand('<cWORD>')
-                        builtin.grep_string({ search = word })
-                    end,
-                    mode = 'n',
-                    desc = 'Project WORD under cursor',
                 },
             }
         end,
