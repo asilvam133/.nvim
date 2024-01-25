@@ -14,6 +14,7 @@ return {
             dependencies = 'rafamadriz/friendly-snippets',
             opts = { history = true, updateevents = 'TextChanged,TextChangedI' },
         },
+        'onsails/lspkind.nvim',
     },
     opts = function()
         ---@diagnostic disable-next-line: different-requires
@@ -23,22 +24,7 @@ return {
         require('luasnip.loaders.from_vscode').lazy_load()
         luasnip.config.setup({})
 
-        local cmp_icons = true
-        local lspkind_text = true
-
         local utils = require('utils').cmp
-        local formatting_style = {
-            fields = { 'kind', 'abbr', 'menu' },
-
-            format = function(_, item)
-                local icon = (cmp_icons and utils.icons[item.kind]) or ''
-                icon = ' ' .. icon .. ' '
-                item.menu = lspkind_text and '   (' .. item.kind .. ')' or ''
-                item.kind = icon
-
-                return item
-            end,
-        }
 
         local border = utils.border
         return {
@@ -56,8 +42,11 @@ return {
                     require('luasnip').lsp_expand(args.body)
                 end,
             },
-            --TODO: Change to LSP Kind (youtube Devops tools)
-            formatting = formatting_style,
+            formatting = {
+                format = require('lspkind').cmp_format({
+                    with_text = true,
+                }),
+            },
             mapping = cmp.mapping.preset.insert({
                 ['<C-n>'] = cmp.mapping.select_next_item(),
                 ['<C-p>'] = cmp.mapping.select_prev_item(),
