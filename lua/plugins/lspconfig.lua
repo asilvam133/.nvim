@@ -21,6 +21,30 @@ return {
     },
     config = function()
         local lsp_plugin = require('lspconfig')
+        local cmp = require('cmp')
+
+        -- cmp
+        cmp.setup.cmdline('/', {
+            mapping = cmp.mapping.preset.cmdline(),
+            sources = {
+                { name = 'buffer' },
+            },
+        })
+
+        cmp.setup.cmdline(':', {
+            mapping = cmp.mapping.preset.cmdline(),
+            ---@diagnostic disable-next-line: undefined-field
+            sources = cmp.config.sources({
+                { name = 'path' },
+            }, {
+                {
+                    name = 'cmdline',
+                    option = {
+                        ignore_cmds = { 'Man', '!' },
+                    },
+                },
+            }),
+        })
 
         -- servers
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
