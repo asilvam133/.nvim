@@ -38,4 +38,7 @@ return {
             },
         },
     },
+    keys = {
+        { '<leader>nd', function() require('noice').cmd('dismiss') end, mode = 'n', desc = 'Noice dismiss' },
+    },
 }
