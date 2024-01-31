@@ -113,12 +113,6 @@ return {
                     { buffer = ev.buf, desc = 'Rename' }
                 )
                 vim.keymap.set(
-                    { 'n', 'v' },
-                    '<space>ca',
-                    vim.lsp.buf.code_action,
-                    { buffer = ev.buf, desc = 'Actions' }
-                )
-                vim.keymap.set(
                     'n',
                     '<space>cf',
                     vim.lsp.buf.format,
