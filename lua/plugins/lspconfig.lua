@@ -114,7 +114,7 @@ return {
                 )
                 vim.keymap.set(
                     'n',
-                    '<space>cf',
+                    '<leader>f',
                     vim.lsp.buf.format,
                     { buffer = ev.buf, desc = 'LSP format' }
                 )

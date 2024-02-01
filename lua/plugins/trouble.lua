@@ -4,7 +4,7 @@ return {
     opts = {},
     keys = {
         {
-            '<leader>q<space>',
+            '<leader>tq',
             function()
                 require('trouble').toggle('quickfix')
             end,
@@ -12,7 +12,7 @@ return {
             desc = 'Trouble: Quickfix',
         },
         {
-            '<leader>qd',
+            '<leader>td',
             function()
                 require('trouble').toggle('document_diagnostics')
             end,
@@ -20,7 +20,7 @@ return {
             desc = 'Trouble: Diagnostics (Document)',
         },
         {
-            '<leader>qw',
+            '<leader>tD',
             function()
                 require('trouble').toggle('workspace_diagnostics')
             end,

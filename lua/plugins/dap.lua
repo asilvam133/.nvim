@@ -57,7 +57,7 @@ return {
                 desc = 'DAP: Toggle breakpoint',
             },
             {
-                '<leader>d<space>',
+                '<leader>dc',
                 function()
                     ---@diagnostic disable-next-line: different-requires
                     require('dap').continue()
@@ -117,15 +117,6 @@ return {
                 end,
                 mode = 'n',
                 desc = 'DAP: Run last',
-            },
-        },
-    },
-    {
-        'folke/which-key.nvim',
-        optional = true,
-        opts = {
-            defaults = {
-                ['<leader>d'] = { name = '+Debug' },
             },
         },
     },
