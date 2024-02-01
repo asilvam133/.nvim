@@ -22,7 +22,7 @@ return {
     opts = {},
     keys = {
         {
-            '<leader>gs',
+            '<leader>go',
             function()
                 require('neogit').open()
             end,

@@ -47,6 +47,7 @@ return {
                 { '<C-p>', builtin.git_status, mode = 'n', desc = 'Git changes' },
                 { '<leader>vh', builtin.help_tags, mode = 'n', desc = 'Help tags' },
                 { '<leader>vb', builtin.buffers, mode = 'n', desc = 'Buffers' },
+                { '<leader>vk', builtin.keymaps, mode = 'n', desc = 'Keymaps' },
                 {
                     '<leader>pw',
                     builtin.grep_string,

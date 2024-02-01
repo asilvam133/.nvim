@@ -1,8 +1,8 @@
 local bufnr = vim.api.nvim_get_current_buf()
 
 --debuggables
-vim.keymap.set('n', '<leader>d<space>', '<Nop>')
-vim.keymap.set('n', '<leader>d<space>', function()
+vim.keymap.set('n', '<leader>dc', '<Nop>')
+vim.keymap.set('n', '<leader>dc', function()
     vim.cmd.RustLsp({
         'debuggables',
     })
