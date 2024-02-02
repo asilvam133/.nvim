@@ -110,7 +110,7 @@ return {
                     'n',
                     '<space>cn',
                     vim.lsp.buf.rename,
-                    { buffer = ev.buf, desc = 'Rename' }
+                    { buffer = ev.buf, desc = 'Code rename' }
                 )
                 vim.keymap.set(
                     'n',

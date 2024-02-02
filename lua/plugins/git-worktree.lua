@@ -5,13 +5,13 @@ return {
 
         return {
             {
-                '<leader>gwa',
+                '<leader>ga',
                 require('telescope').extensions.git_worktree.create_git_worktree,
                 mode = 'n',
                 desc = 'Git worktree add',
             },
             {
-                '<leader>gws',
+                '<leader>gs',
                 require('telescope').extensions.git_worktree.git_worktrees,
                 mode = 'n',
                 desc = 'Git worktree switch (C-d to delete)',

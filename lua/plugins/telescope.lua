@@ -45,14 +45,14 @@ return {
             return {
                 { '<leader>/', builtin.resume, mode = 'n', desc = 'Resume search' },
                 { '<C-p>', builtin.git_status, mode = 'n', desc = 'Git changes' },
-                { '<leader>vh', builtin.help_tags, mode = 'n', desc = 'Help tags' },
-                { '<leader>vb', builtin.buffers, mode = 'n', desc = 'Buffers' },
-                { '<leader>vk', builtin.keymaps, mode = 'n', desc = 'Keymaps' },
+                { '<leader>vh', builtin.help_tags, mode = 'n', desc = 'View help tags' },
+                { '<leader>vb', builtin.buffers, mode = 'n', desc = 'View buffers' },
+                { '<leader>vk', builtin.keymaps, mode = 'n', desc = 'View keymaps' },
                 {
                     '<leader>pw',
                     builtin.grep_string,
                     mode = 'n',
-                    desc = 'Search word under cursor',
+                    desc = 'Project search word under cursor',
                 },
                 {
                     '<leader>pW',
@@ -61,7 +61,7 @@ return {
                         builtin.grep_string({ search = word })
                     end,
                     mode = 'n',
-                    desc = 'Search WORD under cursor',
+                    desc = 'Project search WORD under cursor',
                 },
                 {
                     '<leader>pf',
