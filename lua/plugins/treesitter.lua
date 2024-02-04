@@ -11,7 +11,6 @@ return {
                 ensure_installed = {
                     'bash',
                     'lua',
-                    'norg',
                     'python',
                     'ron',
                     'rust',
