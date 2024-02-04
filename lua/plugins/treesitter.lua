@@ -11,6 +11,8 @@ return {
                 ensure_installed = {
                     'bash',
                     'lua',
+                    'markdown',
+                    'markdown_inline',
                     'python',
                     'ron',
                     'rust',
