@@ -10,6 +10,7 @@ return {
         },
         formatters_by_ft = {
             lua = { 'stylua' },
+            python = { 'black' },
             sh = { 'shfmt' },
             yaml = { 'yamlfmt' },
         },
@@ -19,7 +20,7 @@ return {
     },
     keys = {
         {
-            '<leader>cf',
+            '<leader>f',
             function()
                 require('conform').format({ async = true, lsp_fallback = true })
             end,

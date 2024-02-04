@@ -120,12 +120,6 @@ return {
                 )
                 vim.keymap.set(
                     'n',
-                    '<leader>f',
-                    vim.lsp.buf.format,
-                    { buffer = ev.buf, desc = 'LSP format' }
-                )
-                vim.keymap.set(
-                    'n',
                     'gr',
                     vim.lsp.buf.references,
                     { buffer = ev.buf, desc = 'Go to references' }
