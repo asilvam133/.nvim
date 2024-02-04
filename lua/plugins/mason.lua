@@ -7,6 +7,7 @@ return {
         ensure_installed = {
             'codelldb',
             'lua-language-server',
+            'marksman',
             'shfmt',
             'stylua',
             'yaml-language-server',
