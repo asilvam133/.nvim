@@ -20,8 +20,6 @@ return {
                     'toml',
                     'vimdoc',
                     'vim',
-                    -- work related
-                    'pkl',
                 },
                 auto_install = true,
                 highlight = { enable = true },
