@@ -45,9 +45,11 @@ return {
             return {
                 { '<leader>/', builtin.resume, mode = 'n', desc = 'Resume search' },
                 { '<C-p>', builtin.git_status, mode = 'n', desc = 'Git changes' },
-                { '<leader>vh', builtin.help_tags, mode = 'n', desc = 'View help tags' },
                 { '<leader>vb', builtin.buffers, mode = 'n', desc = 'View buffers' },
+                { '<leader>vh', builtin.help_tags, mode = 'n', desc = 'View help tags' },
                 { '<leader>vk', builtin.keymaps, mode = 'n', desc = 'View keymaps' },
+                { '<leader>vm', builtin.marks, mode = 'n', desc = 'View marks' },
+                { '<leader>vr', builtin.registers, mode = 'n', desc = 'View registers' },
                 {
                     '<leader>pw',
                     builtin.grep_string,
