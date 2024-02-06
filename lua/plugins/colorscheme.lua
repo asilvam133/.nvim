@@ -1,7 +1,7 @@
 return {
     {
         'rebelot/kanagawa.nvim',
-        lazy = false,
+        lazy = true,
         priority = 1000,
         opts = {
             transparent = true,
@@ -42,7 +42,7 @@ return {
     {
         'catppuccin/nvim',
         name = 'catppuccin',
-        lazy = false,
+        lazy = true,
         priority = 1000,
         opts = {
             flavour = 'mocha',
