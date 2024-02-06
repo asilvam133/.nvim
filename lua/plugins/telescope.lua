@@ -19,7 +19,7 @@ return {
             return {
                 defaults = {
                     color_devicons = true,
-                    layout_strategy = 'flex',
+                    layout_strategy = 'vertical',
                     layout_config = {
                         prompt_position = 'top',
                         vertical = {
@@ -68,7 +68,7 @@ return {
                 {
                     '<leader>pf',
                     function()
-                        builtin.find_files({ path_display = { 'shorten' } })
+                        builtin.find_files({ path_display = { 'truncate' } })
                     end,
                     mode = 'n',
                     desc = 'Project files',
