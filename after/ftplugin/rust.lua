@@ -7,3 +7,9 @@ vim.keymap.set('n', '<leader>dc', function()
         'debuggables',
     })
 end, { silent = true, buffer = bufnr, desc = 'Rust: Debuggables' })
+
+vim.keymap.set('n', '<leader>cr', function()
+    vim.cmd.RustAnalyzer({
+        'restart',
+    })
+end, { silent = true, buffer = bufnr, desc = 'Rust: Restart LSP' })
