@@ -59,10 +59,10 @@ return {
                 }),
             }),
             sources = cmp.config.sources({
+                -- nvim_lsp unknown source in CmpStatus because it is lazy loaded on InsertEnter
                 { name = 'nvim_lsp' },
                 { name = 'luasnip' },
                 { name = 'path' },
-                { name = 'neorg' },
             }, {
                 { name = 'buffer' },
             }),
