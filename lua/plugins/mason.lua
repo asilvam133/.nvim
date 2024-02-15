@@ -11,6 +11,7 @@ return {
             'marksman',
             'shfmt',
             'stylua',
+            'taplo',
             'yaml-language-server',
             'yamlfmt',
         },
