@@ -19,7 +19,12 @@ return {
         },
         'ibhagwan/fzf-lua',
     },
-    opts = {},
+    opts = {
+        disable_line_numbers = false,
+        status = {
+            recent_commit_count = 25,
+        },
+    },
     keys = {
         {
             '<leader>go',
