@@ -62,6 +62,7 @@ return {
             },
         })
         lsp_plugin.marksman.setup({})
+        lsp_plugin.taplo.setup({})
         lsp_plugin.yamlls.setup({})
 
         local builtin = require('telescope.builtin')

@@ -12,6 +12,7 @@ return {
             lua = { 'stylua' },
             python = { 'black' },
             sh = { 'shfmt' },
+            toml = { 'taplo' },
             yaml = { 'yamlfmt' },
         },
         formatters = {
