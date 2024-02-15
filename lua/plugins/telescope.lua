@@ -74,6 +74,14 @@ return {
                     desc = 'Project files',
                 },
                 {
+                    '<leader>ph',
+                    function()
+                        builtin.find_files({ path_display = { 'truncate' }, hidden = true })
+                    end,
+                    mode = 'n',
+                    desc = 'Project hidden files',
+                },
+                {
                     '<leader>ps',
                     function()
                         builtin.grep_string({ search = vim.fn.input('Restrict by = ') })
