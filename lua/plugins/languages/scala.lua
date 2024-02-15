@@ -11,8 +11,13 @@ return {
                 excludedPackages = { 'akka.actor.typed.javadsl', 'com.github.swagger.akka.javadsl' },
             }
             metals_config.capabilities = require('cmp_nvim_lsp').default_capabilities()
-            metals_config.on_attach = function(_, _)
+            metals_config.on_attach = function(client, bufnr)
                 require('metals').setup_dap()
+
+                local navic = require('nvim-navic')
+                if client.server_capabilities.documentSymbolProvider then
+                    navic.attach(client, bufnr)
+                end
             end
 
             local nvim_metals_group = vim.api.nvim_create_augroup('nvim-metals', { clear = true })
