@@ -9,4 +9,10 @@ for type, icon in pairs(M.signs) do
     sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
+vim.diagnostic.config({
+    virtual_text = {
+        prefix = '●',
+    },
+})
+
 return M
