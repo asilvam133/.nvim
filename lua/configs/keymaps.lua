@@ -16,9 +16,6 @@ vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move selection one line u
 vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]], { desc = 'Yank selection to system clipboard' })
 vim.keymap.set('x', '<leader>Y', [["+Y]], { desc = 'Yank rest of line to system clipboard' })
 
--- Delete and forget
-vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Delete and forget' })
-
 -- Fix cursorline keybinding
 vim.keymap.set('n', 'zv', '<cmd>set cursorline!<cr>', { desc = 'Show cursor line' })
 
