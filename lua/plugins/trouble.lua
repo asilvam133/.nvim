@@ -12,7 +12,7 @@ return {
             desc = 'Trouble: Quickfix',
         },
         {
-            '<leader>k',
+            '<leader>x',
             function()
                 require('trouble').toggle('document_diagnostics')
             end,
@@ -20,7 +20,7 @@ return {
             desc = 'Trouble: Diagnostics (Document)',
         },
         {
-            '<leader>K',
+            '<leader>X',
             function()
                 require('trouble').toggle('workspace_diagnostics')
             end,
