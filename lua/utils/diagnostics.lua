@@ -10,6 +10,7 @@ for type, icon in pairs(M.signs) do
 end
 
 vim.diagnostic.config({
+    float = { border = 'rounded' },
     virtual_text = {
         prefix = '●',
     },
