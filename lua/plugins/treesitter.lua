@@ -10,6 +10,10 @@ return {
             require('nvim-treesitter.configs').setup({
                 ensure_installed = {
                     'bash',
+                    'git_config',
+                    'git_rebase',
+                    'gitcommit',
+                    'gitignore',
                     'html',
                     'lua',
                     'markdown',
