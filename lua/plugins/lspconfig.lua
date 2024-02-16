@@ -46,19 +46,10 @@ return {
             }),
         })
 
-        -- navic
-        local navic = require('nvim-navic')
-        local on_attach = function(client, bufnr)
-            if client.server_capabilities.documentSymbolProvider then
-                navic.attach(client, bufnr)
-            end
-        end
-
         -- servers
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
         -- lua
         lsp_plugin.lua_ls.setup({
-            on_attach = on_attach,
             capabilities = capabilities,
             settings = {
                 Lua = {
@@ -73,17 +64,14 @@ return {
         })
         -- markdown
         lsp_plugin.marksman.setup({
-            on_attach = on_attach,
             capabilities = capabilities,
         })
         -- toml
         lsp_plugin.taplo.setup({
-            on_attach = on_attach,
             capabilities = capabilities,
         })
         -- yaml
         lsp_plugin.yamlls.setup({
-            on_attach = on_attach,
             capabilities = capabilities,
         })
 
