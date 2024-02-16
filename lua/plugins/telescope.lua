@@ -45,25 +45,18 @@ return {
             return {
                 { '<leader>/', builtin.resume, mode = 'n', desc = 'Resume search' },
                 { '<C-p>', builtin.git_status, mode = 'n', desc = 'Git changes' },
-                { '<leader>vb', builtin.buffers, mode = 'n', desc = 'View buffers' },
-                { '<leader>vh', builtin.help_tags, mode = 'n', desc = 'View help tags' },
-                { '<leader>vk', builtin.keymaps, mode = 'n', desc = 'View keymaps' },
-                { '<leader>vm', builtin.marks, mode = 'n', desc = 'View marks' },
-                { '<leader>vr', builtin.registers, mode = 'n', desc = 'View registers' },
+                { '<leader>b', builtin.buffers, mode = 'n', desc = 'View buffers' },
+                { '<leader>h', builtin.help_tags, mode = 'n', desc = 'View help tags' },
+                { '<leader>k', builtin.keymaps, mode = 'n', desc = 'View keymaps' },
+                { '<leader>m', builtin.marks, mode = 'n', desc = 'View marks' },
+                { '<leader>r', builtin.registers, mode = 'n', desc = 'View registers' },
                 {
-                    '<leader>pw',
-                    builtin.grep_string,
-                    mode = 'n',
-                    desc = 'Project search word under cursor',
-                },
-                {
-                    '<leader>pW',
+                    '<leader>gc',
                     function()
-                        local word = vim.fn.expand('<cWORD>')
-                        builtin.grep_string({ search = word })
+                        builtin.git_commits({ layout_strategy = 'horizontal' })
                     end,
                     mode = 'n',
-                    desc = 'Project search WORD under cursor',
+                    desc = 'Git commits',
                 },
                 {
                     '<leader>pf',
@@ -88,6 +81,21 @@ return {
                     end,
                     mode = 'n',
                     desc = 'Project search',
+                },
+                {
+                    '<leader>pw',
+                    builtin.grep_string,
+                    mode = 'n',
+                    desc = 'Project search word under cursor',
+                },
+                {
+                    '<leader>pW',
+                    function()
+                        local word = vim.fn.expand('<cWORD>')
+                        builtin.grep_string({ search = word })
+                    end,
+                    mode = 'n',
+                    desc = 'Project search WORD under cursor',
                 },
             }
         end,
