@@ -47,9 +47,12 @@ return {
         })
 
         -- servers
+        local on_attach = require('utils.lsp').on_attach
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
         -- lua
         lsp_plugin.lua_ls.setup({
+            on_attach = on_attach,
             capabilities = capabilities,
             settings = {
                 Lua = {
@@ -64,14 +67,17 @@ return {
         })
         -- markdown
         lsp_plugin.marksman.setup({
+            on_attach = on_attach,
             capabilities = capabilities,
         })
         -- toml
         lsp_plugin.taplo.setup({
+            on_attach = on_attach,
             capabilities = capabilities,
         })
         -- yaml
         lsp_plugin.yamlls.setup({
+            on_attach = on_attach,
             capabilities = capabilities,
         })
 
@@ -88,6 +94,9 @@ return {
                     vim.lsp.buf.hover,
                     { buffer = ev.buf, desc = 'Hover signature' }
                 )
+                vim.keymap.set('n', '<leader>i', function()
+                    vim.lsp.inlay_hint.enable(0, not vim.lsp.inlay_hint.is_enabled())
+                end, { buffer = ev.buf, desc = 'Disable inlay hints' })
                 vim.keymap.set(
                     'n',
                     '<M-k>',
