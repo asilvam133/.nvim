@@ -1,6 +1,15 @@
 return {
     'folke/noice.nvim',
     event = 'VeryLazy',
+    dependencies = {
+        'MunifTanjim/nui.nvim',
+        {
+            'rcarriga/nvim-notify',
+            opts = {
+                background_colour = '#000000',
+            },
+        },
+    },
     opts = {
         cmdline = {
             enabled = true,
@@ -30,15 +39,6 @@ return {
                     find = 'written',
                 },
                 opts = { skip = true },
-            },
-        },
-    },
-    dependencies = {
-        'MunifTanjim/nui.nvim',
-        {
-            'rcarriga/nvim-notify',
-            opts = {
-                background_colour = '#000000',
             },
         },
     },
