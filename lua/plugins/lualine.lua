@@ -23,7 +23,7 @@ return {
                 { 'fancy_diff' },
             },
             lualine_c = {
-                { 'filename' },
+                { 'filename', newfile_status = true, path = 1 },
             },
             lualine_x = {
                 { 'fancy_macro' },
