@@ -42,4 +42,7 @@ return {
             },
         },
     },
+    keys = {
+        { '<leader>n', '<cmd>Noice dismiss<cr>', mode = 'n', desc = 'Noice dismiss' },
+    },
 }
