@@ -112,7 +112,7 @@ return {
             {
                 '<Leader>dl',
                 function()
-                ---@diagnostic disable-next-line: different-requires
+                    ---@diagnostic disable-next-line: different-requires
                     require('dap').run_last()
                 end,
                 mode = 'n',
