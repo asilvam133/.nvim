@@ -2,21 +2,6 @@ return {
     'neovim/nvim-lspconfig',
     lazy = false,
     dependencies = {
-        {
-            'j-hui/fidget.nvim',
-            opts = {
-                notification = {
-                    window = {
-                        winblend = 0,
-                    },
-                },
-                progress = {
-                    display = {
-                        progress_icon = { pattern = 'dots', period = 1 },
-                    },
-                },
-            },
-        },
         'hrsh7th/cmp-nvim-lsp',
     },
     config = function()
