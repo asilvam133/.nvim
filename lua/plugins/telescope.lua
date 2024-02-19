@@ -45,8 +45,22 @@ return {
             { '<leader>/', builtin.resume, mode = 'n', desc = 'Resume search' },
             { '<C-p>', builtin.git_status, mode = 'n', desc = 'Git changes' },
             { '<leader>b', builtin.buffers, mode = 'n', desc = 'View buffers' },
-            { '<leader>h', builtin.help_tags, mode = 'n', desc = 'View help tags' },
-            { '<leader>k', builtin.keymaps, mode = 'n', desc = 'View keymaps' },
+            {
+                '<leader>h',
+                function()
+                    builtin.help_tags({ layout_strategy = 'horizontal' })
+                end,
+                mode = 'n',
+                desc = 'View help tags',
+            },
+            {
+                '<leader>k',
+                function()
+                    builtin.keymaps({ layout_strategy = 'horizontal' })
+                end,
+                mode = 'n',
+                desc = 'View keymaps',
+            },
             { '<leader>m', builtin.marks, mode = 'n', desc = 'View marks' },
             { '<leader>r', builtin.registers, mode = 'n', desc = 'View registers' },
             {
