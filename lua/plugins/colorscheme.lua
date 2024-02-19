@@ -6,7 +6,7 @@ return {
         opts = {
             styles = {
                 bold = false,
-                italic = false,
+                italic = true,
                 transparency = true,
             },
             highlight_groups = {
