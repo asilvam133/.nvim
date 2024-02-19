@@ -10,6 +10,7 @@ return {
                 transparency = true,
             },
             highlight_groups = {
+                StatusLine = { fg = '#000000', bg = 'pine' },
                 TelescopeTitle = { fg = 'base', bg = 'love' },
                 TelescopePromptTitle = { fg = 'base', bg = 'pine' },
                 TelescopePreviewTitle = { fg = 'base', bg = 'iris' },
