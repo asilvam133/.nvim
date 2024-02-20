@@ -2,8 +2,9 @@ return {
     {
         'tpope/vim-fugitive',
         keys = {
-            { '<leader>go', '<cmd>tab Git<cr>',          mode = 'n', desc = 'Git open' },
-            { '<leader>gp', '<cmd>Git pull<cr>',         mode = 'n', desc = 'Git pull' },
+            { '<leader>go', '<cmd>tab Git<cr>', mode = 'n', desc = 'Git open' },
+            { '<leader>gl', '<cmd>tab Git log<cr>', mode = 'n', desc = 'Git log' },
+            { '<leader>gp', '<cmd>Git pull<cr>', mode = 'n', desc = 'Git pull' },
             { '<leader>gP', '<cmd>Git push --force<cr>', mode = 'n', desc = 'Git push (force)' },
         },
     },
