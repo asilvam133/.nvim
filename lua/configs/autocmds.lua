@@ -22,3 +22,11 @@ vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
     pattern = '*.conf',
     command = [[setf config]],
 })
+
+vim.api.nvim_create_user_command('DiagnosticsToggle', function()
+    if vim.diagnostic.is_disabled() then
+        vim.diagnostic.enable()
+    else
+        vim.diagnostic.disable()
+    end
+end, {})
