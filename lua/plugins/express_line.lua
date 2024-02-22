@@ -4,30 +4,9 @@ return {
     lazy = false,
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
-        if not pcall(require, 'el') then
-            return
-        end
-
         require('el').reset_windows()
 
         vim.opt.laststatus = 3
-
-        if true then
-            -- Disappearing statusline for commands
-            vim.opt.cmdheight = 0
-            vim.api.nvim_create_autocmd('ModeChanged', {
-                group = vim.api.nvim_create_augroup('StatusDisappear', { clear = true }),
-                callback = function()
-                    if vim.v.event.new_mode == 'c' then
-                        vim.opt.laststatus = 0
-                    elseif vim.v.event.old_mode == 'c' then
-                        vim.opt.laststatus = 3
-                    end
-
-                    pcall(vim.cmd, [[silent! redraw]])
-                end,
-            })
-        end
 
         local builtin = require('el.builtin')
         local diagnostic = require('el.diagnostic')
@@ -100,18 +79,18 @@ return {
             return lsp_statusline.current_function(window, buffer)
         end
 
-        local minimal_status_line = function(_, buffer)
-            if string.find(buffer.name, 'sourcegraph/sourcegraph') then
-                return true
+        local is_recording = function(_, _)
+            local reg = vim.fn.reg_recording()
+            if reg == '' then
+                return ''
             end
+            return '● ' .. reg .. ' '
         end
 
         local diagnostic_display = diagnostic.make_buffer()
 
         require('el').setup({
-            generator = function(window, buffer)
-                local is_minimal = minimal_status_line(window, buffer)
-
+            generator = function()
                 local mode = extensions.gen_mode({ format_string = ' %s ' })
 
                 local items = {
@@ -123,6 +102,7 @@ return {
                     { sections.maximum_width(builtin.file_relative, 0.60), required = true },
                     { sections.collapse_builtin({ { ' ' }, { builtin.modified_flag } }) },
                     { sections.split, required = true },
+                    { is_recording },
                     { diagnostic_display },
                     { show_current_func },
                     { lsp_statusline.server_progress },
@@ -144,17 +124,9 @@ return {
                     { builtin.filetype },
                 }
 
-                local add_item = function(result, item)
-                    if is_minimal and not item.required then
-                        return
-                    end
-
-                    table.insert(result, item)
-                end
-
                 local result = {}
                 for _, item in ipairs(items) do
-                    add_item(result, item)
+                    table.insert(result, item)
                 end
 
                 return result
