@@ -47,7 +47,12 @@ return {
                         callSnippet = 'Replace',
                     },
                     diagnostics = {
-                        globals = { 'vim' },
+                        disable = {
+                            'missing-fields',
+                        },
+                        globals = {
+                            'vim',
+                        },
                     },
                     workspace = {
                         checkThirdParty = false,
