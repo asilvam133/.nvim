@@ -1,5 +1,5 @@
 return {
     'lukas-reineke/virt-column.nvim',
-    lazy = false,
+    event = 'BufRead',
     opts = {},
 }
