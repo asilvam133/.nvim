@@ -36,16 +36,21 @@ return {
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
         -- lua
+        require('neodev').setup()
+
         lsp_plugin.lua_ls.setup({
             on_attach = on_attach,
             capabilities = capabilities,
             settings = {
                 Lua = {
-                    workspace = {
-                        checkThirdParty = false,
+                    completion = {
+                        callSnippet = 'Replace',
                     },
                     diagnostics = {
                         globals = { 'vim' },
+                    },
+                    workspace = {
+                        checkThirdParty = false,
                     },
                 },
             },
