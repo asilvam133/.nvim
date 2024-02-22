@@ -52,7 +52,7 @@ return {
                 { mode = 'n', keys = '<leader>d', desc = 'DAP' },
                 { mode = 'n', keys = '<leader>g', desc = 'Git' },
                 { mode = 'n', keys = '<leader>p', desc = 'Project' },
-                { mode = 'n', keys = '<leader>s', desc = 'Search (Flash)' },
+                { mode = 'n', keys = '<leader>s', desc = 'Surround' },
                 { mode = 'n', keys = '<leader>v', desc = 'View' },
             },
         }

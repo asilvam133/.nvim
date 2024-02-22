@@ -8,7 +8,7 @@ return {
     },
     keys = {
         {
-            '<leader>ss',
+            's',
             mode = { 'n', 'x', 'o' },
             function()
                 require('flash').jump()
@@ -16,7 +16,7 @@ return {
             desc = 'Flash search',
         },
         {
-            '<leader>sS',
+            'S',
             mode = { 'n', 'x', 'o' },
             function()
                 require('flash').treesitter()
@@ -24,7 +24,7 @@ return {
             desc = 'Flash select TS node',
         },
         {
-            '<leader>sr',
+            'r',
             mode = 'o',
             function()
                 require('flash').remote()
@@ -32,7 +32,7 @@ return {
             desc = 'lash command remote (pending mode)',
         },
         {
-            '<leader>sR',
+            'R',
             mode = { 'o', 'x' },
             function()
                 require('flash').treesitter_search()
