@@ -2,7 +2,7 @@ return {
     'williamboman/mason.nvim',
     cmd = 'Mason',
     build = ':MasonUpdate',
-    lazy = false,
+    event = 'BufRead',
     opts = {
         ensure_installed = {
             'codelldb',

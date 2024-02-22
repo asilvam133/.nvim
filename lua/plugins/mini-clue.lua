@@ -1,6 +1,6 @@
 return {
     'echasnovski/mini.clue',
-    lazy = false,
+    event = 'BufRead',
     opts = function()
         local miniclue = require('mini.clue')
         return {

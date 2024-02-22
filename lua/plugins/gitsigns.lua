@@ -1,6 +1,6 @@
 return {
     'lewis6991/gitsigns.nvim',
-    event = 'VeryLazy',
+    event = 'BufRead',
     opts = {
         -- See `:help gitsigns.txt`
         trouble = true,
