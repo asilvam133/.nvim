@@ -83,10 +83,32 @@ return {
             if reg == '' then
                 return ''
             end
-            return '● ' .. reg .. ' '
+            return ' @' .. reg .. ' '
         end
 
-        local diagnostic_display = diagnostic.make_buffer()
+        local diagnostic_formatter = function(_, _, counts)
+            local items = {}
+
+            if counts.errors > 0 then
+                table.insert(items, string.format(':%s', counts.errors))
+            end
+
+            if counts.warnings > 0 then
+                table.insert(items, string.format(':%s', counts.warnings))
+            end
+
+            if counts.infos > 0 then
+                table.insert(items, string.format(':%s', counts.infos))
+            end
+
+            if counts.hints > 0 then
+                table.insert(items, string.format(':%s', counts.hints))
+            end
+
+            return table.concat(items, ' ')
+        end
+
+        local diagnostic_display = diagnostic.make_buffer(diagnostic_formatter)
 
         require('el').setup({
             generator = function()
