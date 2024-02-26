@@ -29,6 +29,10 @@ vim.keymap.set('n', 'G', 'Gzz', { desc = 'Go to end of file and center' })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
+-- Create new line and keep curson position
+vim.keymap.set({ 'n', 'v' }, '[<space>', 'O<esc>j')
+vim.keymap.set({ 'n', 'v' }, ']<space>', 'o<esc>k')
+
 -- Diagnostic keymaps
 vim.keymap.set(
     'n',
