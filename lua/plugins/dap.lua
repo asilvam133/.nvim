@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-parameter
 return {
     {
         'mfussenegger/nvim-dap',
@@ -38,7 +39,7 @@ return {
                 {
                     '<Leader>de',
                     function()
-                        require('dapui').float_element()
+                        require('dapui').eval()
                     end,
                     mode = 'n',
                     desc = 'DAP: Evaluate expression',
