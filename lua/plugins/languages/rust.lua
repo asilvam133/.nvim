@@ -1,6 +1,6 @@
 return {
     'mrcjkb/rustaceanvim',
-    version = '^3', -- Recommended
+    version = '^4', -- Recommended
     ft = { 'rust' },
     config = function()
         local on_attach = require('utils.lsp').on_attach
