@@ -4,7 +4,34 @@ return {
     dependencies = {
         'hrsh7th/cmp-nvim-lsp',
     },
-    config = function()
+    opts = {
+        servers = {
+            lua_ls = {
+                settings = {
+                    Lua = {
+                        completion = {
+                            callSnippet = 'Replace',
+                        },
+                        diagnostics = {
+                            disable = {
+                                'missing-fields',
+                            },
+                            globals = {
+                                'vim',
+                            },
+                        },
+                        workspace = {
+                            checkThirdParty = false,
+                        },
+                    },
+                },
+            },
+            marksman = {},
+            taplo = {},
+            yamlls = {},
+        },
+    },
+    config = function(_, opts)
         local lsp_plugin = require('lspconfig')
         local cmp = require('cmp')
 
@@ -35,46 +62,18 @@ return {
         local on_attach = require('utils.lsp').on_attach
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-        -- lua
+        local servers = opts.servers
+
+        -- extended lua API signature help
         require('neodev').setup()
 
-        lsp_plugin.lua_ls.setup({
-            on_attach = on_attach,
-            capabilities = capabilities,
-            settings = {
-                Lua = {
-                    completion = {
-                        callSnippet = 'Replace',
-                    },
-                    diagnostics = {
-                        disable = {
-                            'missing-fields',
-                        },
-                        globals = {
-                            'vim',
-                        },
-                    },
-                    workspace = {
-                        checkThirdParty = false,
-                    },
-                },
-            },
-        })
-        -- markdown
-        lsp_plugin.marksman.setup({
-            on_attach = on_attach,
-            capabilities = capabilities,
-        })
-        -- toml
-        lsp_plugin.taplo.setup({
-            on_attach = on_attach,
-            capabilities = capabilities,
-        })
-        -- yaml
-        lsp_plugin.yamlls.setup({
-            on_attach = on_attach,
-            capabilities = capabilities,
-        })
+        for server, server_opts in pairs(servers) do
+            lsp_plugin[server].setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+                settings = server_opts.settings and server_opts.settings or {},
+            })
+        end
 
         local builtin = require('telescope.builtin')
         vim.api.nvim_create_autocmd('LspAttach', {
