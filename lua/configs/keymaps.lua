@@ -40,3 +40,7 @@ vim.keymap.set(
     vim.diagnostic.open_float,
     { desc = 'Open floating diagnostic message' }
 )
+
+-- Quickfix
+vim.keymap.set('n', '<C-j>', '<cmd>cn<cr>', { silent = true, desc = 'Next Quickfix item' })
+vim.keymap.set('n', '<C-k>', '<cmd>cp<cr>', { silent = true, desc = 'Previous Quickfix item' })

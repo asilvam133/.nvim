@@ -14,8 +14,6 @@ return {
     },
     opts = function()
         -- trouble is working with everything except with the git_status picker
-        local actions = require('telescope.actions')
-
         return {
             defaults = {
                 color_devicons = true,
@@ -24,16 +22,6 @@ return {
                     prompt_position = 'top',
                     vertical = {
                         mirror = true,
-                    },
-                },
-                mappings = {
-                    i = {
-                        ['<C-q>'] = actions.send_to_qflist,
-                        ['<M-q>'] = actions.send_selected_to_qflist,
-                    },
-                    n = {
-                        ['<C-q>'] = actions.send_to_qflist,
-                        ['<M-q>'] = actions.send_selected_to_qflist,
                     },
                 },
             },
