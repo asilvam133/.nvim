@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-field
 require('configs')
 
 -- lazy.nvim
@@ -24,6 +25,19 @@ require('lazy').setup({
     },
     change_detection = {
         notify = false,
+    },
+    performance = {
+        rtp = {
+            -- disable some rtp plugins
+            disabled_plugins = {
+                'gzip',
+                'matchit',
+                'matchparen',
+                'tarPlugin',
+                'tohtml',
+                'zipPlugin',
+            },
+        },
     },
 }, {})
 
