@@ -32,15 +32,14 @@ return {
 
         return {
             { '<leader>/', builtin.resume, mode = 'n', desc = 'Resume search' },
-            { '<C-p>', builtin.git_status, mode = 'n', desc = 'Git changes' },
-            { '<leader>b', builtin.buffers, mode = 'n', desc = 'View buffers' },
+            { '<leader>b', builtin.buffers, mode = 'n', desc = 'Buffers' },
             {
                 '<leader>h',
                 function()
                     builtin.help_tags({ layout_strategy = 'horizontal' })
                 end,
                 mode = 'n',
-                desc = 'View help tags',
+                desc = 'Help',
             },
             {
                 '<leader>k',
@@ -48,56 +47,59 @@ return {
                     builtin.keymaps({ layout_strategy = 'horizontal' })
                 end,
                 mode = 'n',
-                desc = 'View keymaps',
+                desc = 'Keymaps',
             },
-            { '<leader>m', builtin.marks, mode = 'n', desc = 'View marks' },
-            { '<leader>r', builtin.registers, mode = 'n', desc = 'View registers' },
+            { '<leader>m', builtin.marks, mode = 'n', desc = 'Marks' },
+            { '<leader>r', builtin.registers, mode = 'n', desc = 'Registers' },
             {
-                '<leader>gc',
-                function()
-                    builtin.git_commits({ layout_strategy = 'horizontal' })
-                end,
-                mode = 'n',
-                desc = 'Git commits',
-            },
-            {
-                '<leader>pf',
+                '<leader>f',
                 function()
                     builtin.find_files({ path_display = { 'truncate' } })
                 end,
                 mode = 'n',
-                desc = 'Project files',
+                desc = 'Files',
             },
             {
-                '<leader>ph',
+                '<leader>F',
                 function()
                     builtin.find_files({ path_display = { 'truncate' }, hidden = true })
                 end,
                 mode = 'n',
-                desc = 'Project hidden files',
+                desc = 'Files (Hidden)',
             },
             {
-                '<leader>ps',
+                '<leader>s',
                 function()
-                    builtin.grep_string({ search = vim.fn.input('Restrict by = ') })
+                    builtin.grep_string({ search = vim.fn.input('Grep by: ') })
                 end,
                 mode = 'n',
-                desc = 'Project search',
+                desc = 'Search',
             },
             {
-                '<leader>pw',
+                '<leader>w',
                 builtin.grep_string,
                 mode = 'n',
-                desc = 'Project search word under cursor',
+                desc = 'Word (Grep)',
             },
             {
-                '<leader>pW',
+                '<leader>W',
                 function()
                     local word = vim.fn.expand('<cWORD>')
                     builtin.grep_string({ search = word })
                 end,
                 mode = 'n',
-                desc = 'Project search WORD under cursor',
+                desc = 'WORD (Grep)',
+            },
+
+            -- git related
+            { '<leader>gc', builtin.git_status, mode = 'n', desc = 'Git changes' },
+            {
+                '<leader>gC',
+                function()
+                    builtin.git_commits({ layout_strategy = 'horizontal' })
+                end,
+                mode = 'n',
+                desc = 'Git commits',
             },
         }
     end,
