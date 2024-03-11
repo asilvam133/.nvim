@@ -7,6 +7,7 @@ return {
     opts = {
         servers = {
             html = {},
+            jsonls = {},
             lua_ls = {
                 settings = {
                     Lua = {
