@@ -151,7 +151,7 @@ return {
         insert_left_component({
             function()
                 local icon, iconhl = get_file_icon()
-                return '%= %#' .. iconhl .. '#' .. icon .. ' ' .. vim.fn.expand('%') .. '%*'
+                return '%#' .. iconhl .. '#' .. icon .. ' ' .. vim.fn.expand('%') .. '%*'
             end,
             padding = { left = 0, right = 0 },
         })
