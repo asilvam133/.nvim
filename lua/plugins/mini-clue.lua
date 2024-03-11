@@ -51,6 +51,7 @@ return {
                 { mode = 'n', keys = '<leader>c', desc = 'Code' },
                 { mode = 'n', keys = '<leader>d', desc = 'DAP' },
                 { mode = 'n', keys = '<leader>g', desc = 'Git' },
+                { mode = 'n', keys = '<leader>p', desc = 'Project FS' },
             },
         }
     end,
