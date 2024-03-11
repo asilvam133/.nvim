@@ -47,6 +47,7 @@ return {
 
         local config = {
             options = {
+                disabled_filetypes = { 'fugitive', 'gitcommit' },
                 component_separators = '',
                 section_separators = '',
                 theme = {
