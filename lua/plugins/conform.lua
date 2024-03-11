@@ -8,6 +8,7 @@ return {
             quiet = false,
         },
         formatters_by_ft = {
+            html = { 'htmlbeautifier' },
             lua = { 'stylua' },
             python = { 'black' },
             sh = { 'shfmt' },

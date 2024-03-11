@@ -6,6 +6,7 @@ return {
     },
     opts = {
         servers = {
+            html = {},
             lua_ls = {
                 settings = {
                     Lua = {
