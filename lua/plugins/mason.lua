@@ -7,6 +7,7 @@ return {
         ensure_installed = {
             'codelldb',
             'html-lsp',
+            'json-lsp',
             'lua-language-server',
             'marksman',
             'shfmt',
