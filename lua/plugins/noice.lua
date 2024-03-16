@@ -41,6 +41,13 @@ return {
                 opts = { skip = true },
             },
         },
+        views = {
+            mini = {
+                win_options = {
+                    winblend = 0,
+                },
+            },
+        },
     },
     keys = {
         { '<leader>n', '<cmd>Noice dismiss<cr>', mode = 'n', desc = 'Noice dismiss' },
