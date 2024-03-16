@@ -43,7 +43,7 @@ return {
                 },
                 lualine_x = {},
                 lualine_y = {},
-                lualine_z = {},
+                lualine_z = { 'fancy_macro' },
             },
             inactive_sections = {
                 lualine_a = {},
