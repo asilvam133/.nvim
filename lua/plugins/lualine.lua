@@ -18,32 +18,28 @@ return {
 
         return {
             options = {
-                icons_enabled = true,
-                theme = 'auto',
-                component_separators = { left = '', right = '' },
-                section_separators = { left = '', right = '' },
-                disabled_filetypes = { 'fugitive', 'gitcommit' },
+                component_separators = '',
+                section_separators = '',
+                disabled_filetypes = {
+                    'fugitive',
+                    'statusline',
+                },
                 ignore_focus = {},
                 always_divide_middle = true,
-                globalstatus = false,
-                refresh = {
-                    statusline = 1000,
-                    tabline = 1000,
-                    winbar = 1000,
-                },
+                globalstatus = true,
             },
             sections = {
-                lualine_a = { 'mode' },
-                lualine_b = { 'branch', 'diff', 'diagnostics' },
+                lualine_a = { 'fancy_mode' },
+                lualine_b = { 'fancy_branch', 'fancy_diff', 'fancy_diagnostics' },
                 lualine_c = {
                     function()
                         local icon, iconhl = get_file_icon()
                         return '%#' .. iconhl .. '#' .. icon .. ' ' .. vim.fn.expand('%') .. '%*'
                     end,
                 },
-                lualine_x = {},
-                lualine_y = {},
-                lualine_z = { 'fancy_macro' },
+                lualine_x = { 'fancy_macro', 'fancy_location' },
+                lualine_y = { 'fancy_filetype' },
+                lualine_z = { 'fancy_lsp_servers' },
             },
             inactive_sections = {
                 lualine_a = {},
