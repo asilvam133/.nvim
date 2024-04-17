@@ -3,6 +3,7 @@ vim.g.maplocalleader = ' '
 
 --netrw
 vim.g.netrw_sort_sequence = [[[\/]$,*]] -- directories first
+vim.g.netrw_banner = 0
 
 vim.o.expandtab = true
 vim.o.shiftround = true
