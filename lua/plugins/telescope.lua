@@ -1,6 +1,6 @@
 return {
     'nvim-telescope/telescope.nvim',
-    branch = '0.1.x',
+    version = false,
     event = 'BufEnter',
     dependencies = {
         'nvim-lua/plenary.nvim',
@@ -17,6 +17,7 @@ return {
         return {
             defaults = {
                 color_devicons = true,
+                path_display = { 'filename_first' },
             },
         }
     end,
@@ -28,17 +29,13 @@ return {
             { '<leader>b', builtin.buffers, mode = 'n', desc = 'Buffers' },
             {
                 '<leader>h',
-                function()
-                    builtin.help_tags({ layout_strategy = 'horizontal' })
-                end,
+                builtin.help_tags,
                 mode = 'n',
                 desc = 'Help',
             },
             {
                 '<leader>k',
-                function()
-                    builtin.keymaps({ layout_strategy = 'horizontal' })
-                end,
+                builtin.keymaps,
                 mode = 'n',
                 desc = 'Keymaps',
             },
@@ -46,25 +43,19 @@ return {
             { '<leader>r', builtin.registers, mode = 'n', desc = 'Registers' },
             {
                 '<leader>f',
-                function()
-                    builtin.find_files({ path_display = { 'truncate' } })
-                end,
+                builtin.find_files,
                 mode = 'n',
                 desc = 'Files',
             },
             {
                 '<leader>F',
-                function()
-                    builtin.find_files({ path_display = { 'truncate' }, hidden = true })
-                end,
+                builtin.find_files,
                 mode = 'n',
                 desc = 'Files (Hidden)',
             },
             {
                 '<leader>s',
-                function()
-                    builtin.grep_string({ search = vim.fn.input('Grep by: ') })
-                end,
+                builtin.grep_string,
                 mode = 'n',
                 desc = 'Search',
             },
@@ -78,7 +69,7 @@ return {
                 '<leader>W',
                 function()
                     local word = vim.fn.expand('<cWORD>')
-                    builtin.grep_string({ search = word })
+                    builtin.grep_string({ search = word, path_display = { 'filename_first' } })
                 end,
                 mode = 'n',
                 desc = 'WORD (Grep)',
@@ -88,9 +79,7 @@ return {
             { '<leader>gc', builtin.git_status, mode = 'n', desc = 'Git changes' },
             {
                 '<leader>gC',
-                function()
-                    builtin.git_commits({ layout_strategy = 'horizontal' })
-                end,
+                builtin.git_commits,
                 mode = 'n',
                 desc = 'Git commits',
             },
