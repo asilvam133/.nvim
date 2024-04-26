@@ -31,7 +31,7 @@ vim.o.wrap = false
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
-vim.wo.signcolumn = 'yes'
+vim.o.signcolumn = 'yes'
 
 vim.o.updatetime = 250
 vim.o.timeoutlen = 300
