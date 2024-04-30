@@ -49,13 +49,17 @@ return {
             },
             {
                 '<leader>F',
-                builtin.find_files,
+                function()
+                    builtin.find_files({ hidden = true })
+                end,
                 mode = 'n',
                 desc = 'Files (Hidden)',
             },
             {
                 '<leader>s',
-                builtin.grep_string,
+                function()
+                    builtin.grep_string({ search = vim.fn.input('Grep by: ') })
+                end,
                 mode = 'n',
                 desc = 'Search',
             },
