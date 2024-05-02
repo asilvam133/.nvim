@@ -19,13 +19,13 @@ return {
             {
                 '<leader>a',
                 function()
-                    harpoon:list():append()
+                    harpoon:list():add()
                 end,
                 mode = 'n',
                 desc = 'Harpoon: Mark file',
             },
             {
-                '<C-h>',
+                '<space>1',
                 function()
                     harpoon:list():select(1)
                 end,
@@ -33,7 +33,7 @@ return {
                 desc = 'Harpoon: Go to mark 1',
             },
             {
-                '<C-t>',
+                '<space>2',
                 function()
                     harpoon:list():select(2)
                 end,
@@ -41,7 +41,7 @@ return {
                 desc = 'Harpoon: Go to mark 2',
             },
             {
-                '<C-n>',
+                '<space>3',
                 function()
                     harpoon:list():select(3)
                 end,
@@ -49,7 +49,7 @@ return {
                 desc = 'Harpoon: Go to mark 3',
             },
             {
-                '<C-s>',
+                '<space>4',
                 function()
                     harpoon:list():select(4)
                 end,
