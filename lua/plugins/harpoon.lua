@@ -25,7 +25,7 @@ return {
                 desc = 'Harpoon: Mark file',
             },
             {
-                '<space>1',
+                '<C-h>',
                 function()
                     harpoon:list():select(1)
                 end,
@@ -33,7 +33,7 @@ return {
                 desc = 'Harpoon: Go to mark 1',
             },
             {
-                '<space>2',
+                '<C-t>',
                 function()
                     harpoon:list():select(2)
                 end,
@@ -41,7 +41,7 @@ return {
                 desc = 'Harpoon: Go to mark 2',
             },
             {
-                '<space>3',
+                '<C-n>',
                 function()
                     harpoon:list():select(3)
                 end,
@@ -49,7 +49,7 @@ return {
                 desc = 'Harpoon: Go to mark 3',
             },
             {
-                '<space>4',
+                '<C-s>',
                 function()
                     harpoon:list():select(4)
                 end,
