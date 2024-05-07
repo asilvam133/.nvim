@@ -1,58 +1,74 @@
 return {
+    -- configuration taken from: https://github.com/adibhanna/nvim/blob/main/lua/plugins/lualine.lua
     'nvim-lualine/lualine.nvim',
     dependencies = {
         'meuter/lualine-so-fancy.nvim',
         'nvim-tree/nvim-web-devicons',
     },
     lazy = false,
-    opts = function()
-        local webdevicons = require('nvim-web-devicons')
-        local function get_file_icon()
-            local icon, iconhl = webdevicons.get_icon(
-                vim.fn.expand('%:t'),
-                vim.fn.expand('%:e'),
-                { default = true, color = true }
-            )
-            return icon or '', iconhl
-        end
-
-        return {
+    vent = { 'BufReadPost', 'BufNewFile', 'VeryLazy' },
+    config = function()
+        require('lualine').setup({
             options = {
-                component_separators = '',
-                section_separators = '',
-                disabled_filetypes = {
-                    'fugitive',
-                    'statusline',
-                },
-                ignore_focus = {},
-                always_divide_middle = true,
+                theme = 'auto',
+                -- theme = "catppuccin",
                 globalstatus = true,
+                icons_enabled = true,
+                -- component_separators = { left = "│", right = "│" },
+                component_separators = { left = '|', right = '|' },
+                section_separators = { left = '', right = '' },
+                disabled_filetypes = {
+                    statusline = {
+                        'alfa-nvim',
+                        'help',
+                        'neo-tree',
+                        'Trouble',
+                        'spectre_panel',
+                        'toggleterm',
+                    },
+                    winbar = {},
+                },
             },
             sections = {
-                lualine_a = { 'fancy_mode' },
-                lualine_b = { 'fancy_branch', 'fancy_diff', 'fancy_diagnostics' },
-                lualine_c = {
-                    function()
-                        local icon, iconhl = get_file_icon()
-                        return '%#' .. iconhl .. '#' .. icon .. ' ' .. vim.fn.expand('%') .. '%*'
-                    end,
+                lualine_a = {},
+                lualine_b = {
+                    'fancy_branch',
                 },
-                lualine_x = { 'fancy_macro', 'fancy_location' },
-                lualine_y = { 'fancy_filetype' },
-                lualine_z = { 'fancy_lsp_servers' },
+                lualine_c = {
+                    {
+                        'filename',
+                        path = 1, -- 2 for full path
+                        symbols = {
+                            modified = '  ',
+                            readonly = '  ',
+                            unnamed = '  ',
+                        },
+                    },
+                    {
+                        'fancy_diagnostics',
+                        sources = { 'nvim_lsp' },
+                        symbols = { error = ' ', warn = ' ', info = ' ' },
+                    },
+                    { 'fancy_searchcount' },
+                },
+                lualine_x = {
+                    'fancy_lsp_servers',
+                    'fancy_diff',
+                    'progress',
+                },
+                lualine_y = {},
+                lualine_z = {},
             },
             inactive_sections = {
                 lualine_a = {},
                 lualine_b = {},
                 lualine_c = { 'filename' },
-                lualine_x = { 'location' },
+                lualine_x = {},
                 lualine_y = {},
                 lualine_z = {},
             },
             tabline = {},
-            winbar = {},
-            inactive_winbar = {},
-            extensions = {},
-        }
+            extensions = { 'lazy' },
+        })
     end,
 }
