@@ -29,10 +29,12 @@ return {
                 local theme = colors.theme
                 return {
                     NormalFloat = { bg = 'none' },
-                    CursorLine = { bg = '#26233a', bold = true },
+                    CursorLine = { bg = '#26233a' },
                     FloatBorder = { bg = 'none' },
                     FloatTitle = { bg = 'none' },
                     NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
+                    TabLine = { bg = 'none' },
+                    TabLineFill = { bg = 'none' },
                     LazyNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
                     TelescopeTitle = { fg = theme.ui.special, bold = true },
                     TelescopePromptNormal = { bg = theme.ui.bg_p1 },
