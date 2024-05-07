@@ -30,6 +30,7 @@ return {
                 return {
                     NormalFloat = { bg = 'none' },
                     CursorLine = { bg = '#26233a' },
+                    ColorColumn = { bg = 'none' },
                     FloatBorder = { bg = 'none' },
                     FloatTitle = { bg = 'none' },
                     NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
