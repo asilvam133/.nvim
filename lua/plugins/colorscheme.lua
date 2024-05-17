@@ -74,12 +74,6 @@ return {
             integrations = {
                 fidget = true,
                 harpoon = true,
-                indent_blankline = {
-                    enabled = true,
-                    scope_color = 'lavander',
-                    colored_indent_levels = false,
-                },
-                neogit = false,
                 noice = true,
                 native_lsp = {
                     enabled = true,
@@ -106,8 +100,14 @@ return {
                     style = 'nvchad',
                 },
                 lsp_trouble = true,
-                which_key = true,
             },
+            custom_highlights = function(_)
+                return {
+                    TabLine = { bg = 'none' },
+                    TabLineSel = { bg = 'none' },
+                    TabLineFill = { bg = 'none' },
+                }
+            end,
         },
         config = function(_, opts)
             require('catppuccin').setup(opts)
