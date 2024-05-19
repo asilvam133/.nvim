@@ -69,7 +69,10 @@ return {
         lazy = false,
         priority = 1000,
         opts = {
-            flavour = 'mocha',
+            background = {
+                dark = 'mocha',
+                light = 'latte',
+            },
             transparent_background = true,
             integrations = {
                 fidget = true,
