@@ -29,12 +29,18 @@ vim.api.nvim_create_user_command('Dg', function()
     vim.diagnostic.enable(not vim.diagnostic.is_enabled())
 end, {})
 
--- manually change colorschemes
-local dark = 'catppuccin-mocha'
+-- manually change colorschemes based on background
+local dark = 'rose-pine'
 local light = 'tokyonight-day'
 vim.api.nvim_create_user_command('Dt', function()
     vim.cmd.colorscheme(dark)
 end, {})
 vim.api.nvim_create_user_command('Lt', function()
     vim.cmd.colorscheme(light)
+end, {})
+
+--  manually change to any colorscheme
+vim.api.nvim_create_user_command('Ct', function()
+    local builtin = require('telescope.builtin')
+    builtin.colorscheme()
 end, {})
