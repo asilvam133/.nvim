@@ -69,10 +69,7 @@ return {
         lazy = false,
         priority = 1000,
         opts = {
-            background = {
-                dark = 'mocha',
-                light = 'latte',
-            },
+            flavour = 'mocha',
             transparent_background = true,
             integrations = {
                 fidget = true,
@@ -115,5 +112,14 @@ return {
         config = function(_, opts)
             require('catppuccin').setup(opts)
         end,
+    },
+    {
+        'folke/tokyonight.nvim',
+        lazy = false,
+        priority = 1000,
+        opts = {
+            transparent = true,
+
+        },
     },
 }
