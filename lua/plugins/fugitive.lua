@@ -12,12 +12,12 @@ return {
         'sindrets/diffview.nvim',
         keys = {
             {
-                '<leader>gd',
+                '<leader>gv',
                 function()
-                    require('diffview').open()
+                    require('diffview').open({})
                 end,
                 mode = 'n',
-                desc = 'Git diff view',
+                desc = 'Git diff open',
             },
         },
     },
