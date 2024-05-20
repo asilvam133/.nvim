@@ -23,10 +23,18 @@ vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
     command = [[setf config]],
 })
 
-vim.api.nvim_create_user_command('DiagnosticsToggle', function()
-    if vim.diagnostic.is_disabled() then
-        vim.diagnostic.enable()
-    else
-        vim.diagnostic.disable()
-    end
+-- [[ user commands  ]]
+-- toggle diagnostics with 'Dg'
+vim.api.nvim_create_user_command('Dg', function()
+    vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+end, {})
+
+-- manually change colorschemes
+local dark = 'catppuccin-mocha'
+local light = 'tokyonight-day'
+vim.api.nvim_create_user_command('Dt', function()
+    vim.cmd.colorscheme(dark)
+end, {})
+vim.api.nvim_create_user_command('Lt', function()
+    vim.cmd.colorscheme(light)
 end, {})
