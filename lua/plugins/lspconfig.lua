@@ -91,7 +91,7 @@ return {
                     { buffer = ev.buf, desc = 'Hover signature' }
                 )
                 vim.keymap.set('n', '<leader>i', function()
-                    vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled(), { bufnr = 0 })
+                    vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({}), { bufnr = 0 })
                 end, { buffer = ev.buf, desc = 'Disable inlay hints' })
                 vim.keymap.set(
                     'n',
