@@ -6,13 +6,17 @@ return {
         opts = {
             styles = {
                 bold = true,
-                italic = true,
+                italic = false,
                 transparency = true,
             },
             highlight_groups = {
-                TelescopeTitle = { fg = 'base', bg = 'pine' },
-                TelescopePromptTitle = { fg = 'base', bg = 'pine' },
-                TelescopePreviewTitle = { fg = 'base', bg = 'pine' },
+                ['@function.builtin.lua'] = { italic = false },
+                ['@lsp.type.comment'] = { italic = true },
+                ['@lsp.typemod.function.defaultLibrary.lua'] = { italic = false },
+                Comment = { italic = true },
+                TabLine = { bg = 'none' },
+                TabLineSel = { bg = 'none' },
+                TabLineFill = { bg = 'none' },
             },
         },
         config = function(_, opts)
