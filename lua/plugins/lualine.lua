@@ -51,13 +51,13 @@ return {
                     },
                     { 'fancy_searchcount' },
                 },
-                lualine_x = {
+                lualine_x = { 'fancy_macro' },
+                lualine_y = {
                     'fancy_lsp_servers',
                     'fancy_diff',
                     'progress',
                 },
-                lualine_y = {},
-                lualine_z = {},
+                lualine_z = { 'fancy_filetype' },
             },
             inactive_sections = {
                 lualine_a = {},
