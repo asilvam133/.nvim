@@ -3,6 +3,9 @@ return {
     event = 'VeryLazy',
     ---@type Flash.Config
     opts = {
+        search = {
+            mode = 'search',
+        },
         modes = {
             search = {
                 enabled = true,
