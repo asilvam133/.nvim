@@ -1,5 +1,4 @@
 return {
-    -- configuration taken from: https://github.com/adibhanna/nvim/blob/main/lua/plugins/lualine.lua
     'nvim-lualine/lualine.nvim',
     dependencies = {
         'meuter/lualine-so-fancy.nvim',
@@ -11,53 +10,60 @@ return {
         require('lualine').setup({
             options = {
                 theme = 'auto',
-                -- theme = "catppuccin",
                 globalstatus = true,
                 icons_enabled = true,
-                -- component_separators = { left = "│", right = "│" },
-                component_separators = { left = '|', right = '|' },
+                component_separators = { left = '', right = '' },
                 section_separators = { left = '', right = '' },
                 disabled_filetypes = {
                     statusline = {
-                        'alfa-nvim',
                         'help',
-                        'neo-tree',
                         'Trouble',
-                        'spectre_panel',
-                        'toggleterm',
                     },
                     winbar = {},
                 },
             },
             sections = {
-                lualine_a = {},
-                lualine_b = {
-                    'fancy_branch',
+                lualine_a = {
+                    { 'location' },
+                    { 'branch', padding = { left = 1, right = 3 } },
                 },
+                lualine_b = {},
                 lualine_c = {
+                    {
+                        'filetype',
+                        icon_only = true,
+                        padding = { left = 2, right = 0 },
+                        color = '_lualine_c_filetype',
+                    },
                     {
                         'filename',
                         path = 1, -- 2 for full path
                         symbols = {
-                            modified = '  ',
-                            readonly = '  ',
-                            unnamed = '  ',
+                            unnamed = '',
+                            readonly = '',
+                            modified = '',
                         },
                     },
+                },
+                lualine_x = {
+                    { 'fancy_macro' },
                     {
                         'fancy_diagnostics',
                         sources = { 'nvim_lsp' },
                         symbols = { error = ' ', warn = ' ', info = ' ' },
+                        padding = { left = 2, right = 2 },
                     },
-                    { 'fancy_searchcount' },
+                    {
+                        'diff',
+                        colored = true,
+                        padding = { left = 2, right = 2 },
+                    },
                 },
-                lualine_x = { 'fancy_macro' },
-                lualine_y = {
+                lualine_y = {},
+                lualine_z = {
                     'fancy_lsp_servers',
-                    'fancy_diff',
                     'progress',
                 },
-                lualine_z = { 'fancy_filetype' },
             },
             inactive_sections = {
                 lualine_a = {},
@@ -68,7 +74,7 @@ return {
                 lualine_z = {},
             },
             tabline = {},
-            extensions = { 'lazy' },
+            extensions = { 'lazy', 'mason', 'quickfix' },
         })
     end,
 }
