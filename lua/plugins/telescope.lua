@@ -57,7 +57,14 @@ return {
             },
             {
                 '<leader>s',
+                builtin.live_grep,
+                mode = 'n',
+                desc = 'Search',
+            },
+            {
+                '<leader>S',
                 function()
+                    -- in case I'm searching in a very large project
                     builtin.grep_string({ search = vim.fn.input('Grep by: ') })
                 end,
                 mode = 'n',
