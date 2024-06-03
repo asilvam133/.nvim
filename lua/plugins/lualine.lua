@@ -61,8 +61,8 @@ return {
                 },
                 lualine_y = {},
                 lualine_z = {
-                    'fancy_lsp_servers',
-                    'progress',
+                    { 'fancy_lsp_servers', padding = { left = 3 } },
+                    { 'progress', padding = { left = 3, right = 3 } },
                 },
             },
             inactive_sections = {
