@@ -16,6 +16,13 @@ vim.api.nvim_create_autocmd('BufWritePre', {
     command = [[%s/\s\+$//e]],
 })
 
+local formatoptions_group = vim.api.nvim_create_augroup('FormatOptionsGroup', { clear = true })
+vim.api.nvim_create_autocmd('BufEnter', {
+    group = formatoptions_group,
+    pattern = '*',
+    command = 'set formatoptions-=o',
+})
+
 local conf_ft_colorscheme = vim.api.nvim_create_augroup('ConfFtColorscheme', { clear = true })
 vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
     group = conf_ft_colorscheme,
