@@ -4,10 +4,6 @@ vim.keymap.set('n', '<esc>', '<cmd>noh<cr>', { silent = true })
 -- lazy.nvim related mappings
 vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>', { desc = 'Lazy UI' })
 
--- Netrw related mappings
-vim.keymap.set('n', '<leader>pv', '<cmd>Ex<cr>', { desc = 'Project view' })
-vim.keymap.set('n', '<leader>pc', '<cmd>e .<cr>', { desc = 'Project view (cwd)' })
-
 -- Moves selection up and down
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move selection one line down' })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move selection one line up' })
