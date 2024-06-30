@@ -59,7 +59,7 @@ return {
                 '<leader>s',
                 builtin.live_grep,
                 mode = 'n',
-                desc = 'Search',
+                desc = 'Search (small projects)',
             },
             {
                 '<leader>S',
@@ -68,7 +68,7 @@ return {
                     builtin.grep_string({ search = vim.fn.input('Grep by: ') })
                 end,
                 mode = 'n',
-                desc = 'Search',
+                desc = 'Search (large projects)',
             },
             {
                 '<leader>w',
