@@ -126,4 +126,20 @@ return {
             transparent = true,
         },
     },
+    {
+        'diegoulloao/neofusion.nvim',
+        lazy = false,
+        priority = 1000,
+        opts = {
+            transparent_mode = true,
+            overrides = {
+                LineNr = { fg = '#fd5e3a' },
+                LineNrAbove = { fg = '#08435e' },
+                LineNrBelow = { fg = '#08435e' },
+            },
+        },
+        config = function(_, opts)
+            require('neofusion').setup(opts)
+        end,
+    },
 }

@@ -9,7 +9,8 @@ return {
     config = function()
         require('lualine').setup({
             options = {
-                theme = 'auto',
+                -- theme = 'auto',
+                theme = require('neofusion.lualine'),
                 globalstatus = true,
                 icons_enabled = true,
                 component_separators = { left = '', right = '' },
