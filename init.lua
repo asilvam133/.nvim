@@ -41,4 +41,4 @@ require('lazy').setup({
     },
 }, {})
 
-vim.cmd.colorscheme('neofusion')
+vim.cmd.colorscheme('rose-pine-main')
