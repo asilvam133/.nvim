@@ -42,3 +42,13 @@ vim.keymap.set(
 -- Quickfix
 vim.keymap.set('n', '<C-j>', '<cmd>cn<cr>', { silent = true, desc = 'Next Quickfix item' })
 vim.keymap.set('n', '<C-k>', '<cmd>cp<cr>', { silent = true, desc = 'Previous Quickfix item' })
+
+-- Colorcolumn
+vim.keymap.set('n', '<leader>cc', function()
+    local column = vim.o.colorcolumn
+    if column == '' then
+        vim.o.colorcolumn = '100'
+    else
+        vim.o.colorcolumn = ''
+    end
+end, { silent = true, desc = 'Toggle color column' })

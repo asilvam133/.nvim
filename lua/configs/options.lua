@@ -12,7 +12,6 @@ vim.o.tabstop = 4
 vim.o.showmode = false
 vim.o.guicursor = ''
 vim.o.cursorline = false
-vim.o.colorcolumn = '100'
 vim.o.hlsearch = true
 
 vim.wo.number = true
