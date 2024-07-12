@@ -34,4 +34,5 @@ return {
             end, { expr = true, buffer = bufnr, desc = 'Jump to previous hunk' })
         end,
     },
+    -- TODO: create keybindings for git signs, such as line blame, stage hunk, reset staged hunk, etc
 }
