@@ -32,7 +32,31 @@ return {
                 end)
                 return '<Ignore>'
             end, { expr = true, buffer = bufnr, desc = 'Jump to previous hunk' })
+
+            vim.keymap.set(
+                'n',
+                '<leader>g?',
+                gs.blame_line,
+                { silent = true, desc = 'Git blame line' }
+            )
+            vim.keymap.set(
+                'n',
+                '<leader>gh',
+                gs.stage_hunk,
+                { silent = true, desc = 'Git stage hunk' }
+            )
+            vim.keymap.set(
+                'n',
+                '<leader>gb',
+                gs.stage_buffer,
+                { silent = true, desc = 'Git stage buffer' }
+            )
+            vim.keymap.set(
+                'n',
+                '<leader>gu',
+                gs.undo_stage_hunk,
+                { silent = true, desc = 'Git unstage hunk' }
+            )
         end,
     },
-    -- TODO: create keybindings for git signs, such as line blame, stage hunk, reset staged hunk, etc
 }
