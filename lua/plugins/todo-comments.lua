@@ -4,6 +4,6 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim' },
     opts = {},
     keys = {
-        { '<leader>t', '<cmd>TodoTelescope<cr>', mode = 'n', desc = 'Todo comments' },
+        { '<leader>t', ':TodoQuickFix<cr>', mode = 'n', desc = 'Todo comments (QuickFix list)' },
     },
 }

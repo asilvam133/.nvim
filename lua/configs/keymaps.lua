@@ -2,7 +2,7 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', '<esc>', '<cmd>noh<cr>', { silent = true })
 
 -- lazy.nvim related mappings
-vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>', { desc = 'Lazy UI' })
+vim.keymap.set('n', '<leader>ul', '<cmd>Lazy<cr>', { desc = 'Lazy UI' })
 
 -- Moves selection up and down
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move selection one line down' })
@@ -44,11 +44,11 @@ vim.keymap.set('n', '<C-j>', '<cmd>cn<cr>', { silent = true, desc = 'Next Quickf
 vim.keymap.set('n', '<C-k>', '<cmd>cp<cr>', { silent = true, desc = 'Previous Quickfix item' })
 
 -- Colorcolumn
-vim.keymap.set('n', '<leader>cc', function()
+vim.keymap.set('n', '<leader>uc', function()
     local column = vim.o.colorcolumn
     if column == '' then
         vim.o.colorcolumn = '100'
     else
         vim.o.colorcolumn = ''
     end
-end, { silent = true, desc = 'Toggle color column' })
+end, { silent = true, desc = 'Colorcolumn (Toggle)' })
