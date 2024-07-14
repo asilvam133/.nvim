@@ -18,6 +18,7 @@ return {
                 TabLine = { bg = 'none' },
                 TabLineSel = { bg = 'none' },
                 TabLineFill = { bg = 'none' },
+                ZenBg = { bg = 'none' },
             },
         },
         config = function(_, opts)
@@ -52,6 +53,7 @@ return {
                     Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 }, -- add `blend = vim.o.pumblend` to enable transparency
                     PmenuSbar = { bg = theme.ui.bg_m1 },
                     PmenuThumb = { bg = theme.ui.bg_p2 },
+                    ZenBg = { bg = 'none' },
                 }
             end,
             colors = {
@@ -111,6 +113,7 @@ return {
                     TabLine = { bg = 'none' },
                     TabLineSel = { bg = 'none' },
                     TabLineFill = { bg = 'none' },
+                    ZenBg = { bg = 'none' },
                 }
             end,
         },
@@ -136,6 +139,7 @@ return {
                 LineNr = { fg = '#fd5e3a' },
                 LineNrAbove = { fg = '#08435e' },
                 LineNrBelow = { fg = '#08435e' },
+                ZenBg = { bg = 'none' },
             },
         },
         config = function(_, opts)
