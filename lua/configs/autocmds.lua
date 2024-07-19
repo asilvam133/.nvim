@@ -30,12 +30,6 @@ vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
     command = [[setf config]],
 })
 
-local zen_mode_on_start = vim.api.nvim_create_augroup('ZenModeOnStart', { clear = true })
-vim.api.nvim_create_autocmd({ 'VimEnter' }, {
-    group = zen_mode_on_start,
-    command = [[ZenMode]],
-})
-
 -- [[ user commands  ]]
 -- toggle diagnostics with 'Dg'
 vim.api.nvim_create_user_command('Dg', function()
