@@ -7,6 +7,10 @@ return {
             dependencies = {
                 'mfussenegger/nvim-dap',
                 'nvim-neotest/nvim-nio',
+                {
+                    'leoluz/nvim-dap-go',
+                    opts = {},
+                },
             },
             opts = {},
             config = function(_, opts)

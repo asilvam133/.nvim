@@ -10,6 +10,7 @@ return {
         formatters_by_ft = {
             html = { 'htmlbeautifier' },
             lua = { 'stylua' },
+            go = { 'goimports', 'gofumpt' },
             python = { 'black' },
             sh = { 'shfmt' },
             toml = { 'taplo' },

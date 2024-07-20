@@ -6,7 +6,14 @@ return {
     opts = {
         ensure_installed = {
             'codelldb',
+            'delve',
+            'gofumpt',
+            'gofumpt',
+            'goimports',
+            'gomodifytags',
+            'gopls',
             'html-lsp',
+            'impl',
             'json-lsp',
             'lua-language-server',
             'marksman',
