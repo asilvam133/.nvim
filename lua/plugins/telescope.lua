@@ -1,6 +1,6 @@
 return {
     'nvim-telescope/telescope.nvim',
-    version = false,
+    branch = '0.1.x',
     lazy = false,
     dependencies = {
         'nvim-lua/plenary.nvim',
@@ -17,12 +17,12 @@ return {
         return {
             defaults = {
                 color_devicons = true,
-                path_display = { 'filename_first' },
             },
         }
     end,
     keys = function()
         local builtin = require('telescope.builtin')
+        require('telescope').load_extension('git_worktree')
 
         return {
             { '<leader>/', builtin.resume, mode = 'n', desc = 'Resume search' },
