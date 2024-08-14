@@ -17,6 +17,7 @@ return {
         return {
             defaults = {
                 color_devicons = true,
+                path_display = { 'truncate' },
             },
         }
     end,
@@ -80,7 +81,7 @@ return {
                 '<leader>W',
                 function()
                     local word = vim.fn.expand('<cWORD>')
-                    builtin.grep_string({ search = word, path_display = { 'filename_first' } })
+                    builtin.grep_string({ search = word })
                 end,
                 mode = 'n',
                 desc = 'WORD (Grep)',
