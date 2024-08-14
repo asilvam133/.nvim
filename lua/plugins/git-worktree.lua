@@ -6,6 +6,14 @@ return {
     },
     keys = {
         {
+            '<leader>ga',
+            function()
+                require('telescope').extensions.git_worktree.create_git_worktree()
+            end,
+            mode = 'n',
+            desc = 'Add/Create worktree',
+        },
+        {
             '<leader>gs',
             function()
                 require('telescope').extensions.git_worktree.git_worktrees({
