@@ -41,4 +41,4 @@ require('lazy').setup({
     },
 }, {})
 
-vim.cmd.colorscheme('rose-pine-main')
+vim.cmd.colorscheme('github_dark_dimmed')

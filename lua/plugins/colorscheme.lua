@@ -146,4 +146,28 @@ return {
             require('neofusion').setup(opts)
         end,
     },
+    {
+        'projekt0n/github-nvim-theme',
+        name = 'github-theme',
+        lazy = false,
+        priority = 1000,
+        opts = {
+            options = {
+                transparent = true,
+            },
+        },
+    },
+    {
+        'neanias/everforest-nvim',
+        version = false,
+        lazy = false,
+        priority = 1000,
+        opts = {
+            background = 'hard',
+            transparent_background_level = 2,
+        },
+        config = function(_, opts)
+            require('everforest').setup(opts)
+        end,
+    },
 }
