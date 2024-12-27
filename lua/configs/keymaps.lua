@@ -47,7 +47,7 @@ vim.keymap.set('n', '<C-k>', '<cmd>cp<cr>', { silent = true, desc = 'Previous Qu
 vim.keymap.set('n', '<leader>uc', function()
     local column = vim.o.colorcolumn
     if column == '' then
-        vim.o.colorcolumn = '100'
+        vim.o.colorcolumn = '70,100'
     else
         vim.o.colorcolumn = ''
     end
