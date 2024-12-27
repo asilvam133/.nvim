@@ -1,6 +1,6 @@
 return {
     'nvim-telescope/telescope.nvim',
-    branch = '0.1.x',
+    branch = 'master',
     lazy = false,
     dependencies = {
         'nvim-lua/plenary.nvim',
@@ -17,13 +17,18 @@ return {
         return {
             defaults = {
                 color_devicons = true,
-                path_display = { 'truncate' },
+                path_display = {
+                    filename_first = {
+                        reverse_directories = false,
+                    },
+                },
             },
         }
     end,
     keys = function()
         local builtin = require('telescope.builtin')
-        require('telescope').load_extension('git_worktree')
+        local themes = require('telescope.themes')
+        local theme = themes.get_dropdown({ previewer = false })
 
         return {
             { '<leader>/', builtin.resume, mode = 'n', desc = 'Resume search' },
@@ -44,14 +49,17 @@ return {
             { '<leader>r', builtin.registers, mode = 'n', desc = 'Registers' },
             {
                 '<leader>f',
-                builtin.find_files,
+                function()
+                    builtin.find_files(theme)
+                end,
                 mode = 'n',
                 desc = 'Files',
             },
             {
                 '<leader>F',
                 function()
-                    builtin.find_files({ hidden = true })
+                    local hidden_files_theme = themes.get_dropdown({ previewer = false, hidden = true })
+                    builtin.find_files(hidden_files_theme)
                 end,
                 mode = 'n',
                 desc = 'Files (Hidden)',
@@ -95,6 +103,15 @@ return {
                 mode = 'n',
                 desc = 'Git commits',
             },
+            {
+
+                '<leader>ut',
+                function()
+                    builtin.colorscheme(theme)
+                end,
+                mode = 'n',
+                desc = 'Colorschemes',
+            }
         }
     end,
 }
