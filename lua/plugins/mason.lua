@@ -8,7 +8,6 @@ return {
             'codelldb',
             'delve',
             'gofumpt',
-            'gofumpt',
             'goimports',
             'gomodifytags',
             'gopls',
