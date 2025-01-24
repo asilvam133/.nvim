@@ -82,18 +82,9 @@ return {
             },
             {
                 '<leader>w',
-                builtin.grep_string,
+                builtin.current_buffer_fuzzy_find,
                 mode = 'n',
-                desc = 'Word (Grep)',
-            },
-            {
-                '<leader>W',
-                function()
-                    local word = vim.fn.expand('<cWORD>')
-                    builtin.grep_string({ search = word })
-                end,
-                mode = 'n',
-                desc = 'WORD (Grep)',
+                desc = 'Search current buffer',
             },
 
             -- git related
