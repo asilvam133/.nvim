@@ -1,5 +1,27 @@
 return {
     {
+        'zaldih/themery.nvim',
+        lazy = false,
+        config = function()
+            require('themery').setup({
+                themes = {
+                    'catppuccin',
+                    'everforest',
+                    'github_dark_dimmed',
+                    'kanagawa-dragon',
+                    'neofusion',
+                    'rose-pine',
+                    'tokyonight',
+                },
+                livePreview = true,
+                makePersist = true,
+            })
+        end,
+        keys = {
+            { '<space>ut', '<cmd>Themery<cr>', mode = 'n', desc = 'Colorschemes' },
+        },
+    },
+    {
         'asilvam133/rose-pine.nvim',
         name = 'rose-pine',
         lazy = false,

@@ -40,5 +40,3 @@ require('lazy').setup({
         },
     },
 }, {})
-
-vim.cmd.colorscheme('everforest')

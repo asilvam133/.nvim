@@ -58,7 +58,8 @@ return {
             {
                 '<leader>F',
                 function()
-                    local hidden_files_theme = themes.get_dropdown({ previewer = false, hidden = true })
+                    local hidden_files_theme =
+                        themes.get_dropdown({ previewer = false, hidden = true })
                     builtin.find_files(hidden_files_theme)
                 end,
                 mode = 'n',
@@ -103,15 +104,6 @@ return {
                 mode = 'n',
                 desc = 'Git commits',
             },
-            {
-
-                '<leader>ut',
-                function()
-                    builtin.colorscheme(theme)
-                end,
-                mode = 'n',
-                desc = 'Colorschemes',
-            }
         }
     end,
 }
