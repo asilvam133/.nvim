@@ -52,3 +52,14 @@ vim.keymap.set('n', '<leader>uc', function()
         vim.o.colorcolumn = ''
     end
 end, { silent = true, desc = 'Colorcolumn (Toggle)' })
+
+-- Terminals
+vim.keymap.set('n', '<leader>ct', function()
+    vim.cmd.new()
+    vim.cmd.wincmd('J')
+    vim.api.nvim_win_set_height(0, 12)
+    vim.wo.winfixheight = true
+    vim.cmd.term()
+end, { silent = true, desc = 'Split terminal' })
+vim.keymap.set('t', '<esc>', '<c-\\><c-n>')
+vim.keymap.set('t', '<C-q>', '<c-\\><c-n><cmd>bd!<cr>')

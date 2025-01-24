@@ -51,3 +51,12 @@ vim.api.nvim_create_user_command('Ct', function()
     local builtin = require('telescope.builtin')
     builtin.colorscheme()
 end, {})
+
+vim.api.nvim_create_autocmd('TermOpen', {
+    group = vim.api.nvim_create_augroup('custom-term-open', {}),
+    callback = function()
+        vim.opt_local.number = false
+        vim.opt_local.relativenumber = false
+        vim.opt_local.scrolloff = 0
+    end,
+})
