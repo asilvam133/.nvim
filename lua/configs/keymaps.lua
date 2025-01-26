@@ -38,6 +38,8 @@ vim.keymap.set(
 vim.keymap.set('n', '<leader>X', vim.diagnostic.setqflist, { silent = true, desc = 'Diagnostics' })
 
 -- Quickfix
+vim.keymap.set('n', '<leader>qo', '<cmd>copen<cr>', { silent = true, desc = 'Open quickfix' })
+vim.keymap.set('n', '<leader>qc', '<cmd>cclose<cr>', { silent = true, desc = 'Close quickfix' })
 vim.keymap.set('n', '<C-j>', '<cmd>cn<cr>', { silent = true, desc = 'Next Quickfix item' })
 vim.keymap.set('n', '<C-k>', '<cmd>cp<cr>', { silent = true, desc = 'Previous Quickfix item' })
 
