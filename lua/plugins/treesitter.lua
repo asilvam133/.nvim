@@ -41,6 +41,11 @@ return {
                 auto_install = true,
                 highlight = { enable = true },
                 indent = { enable = true },
+                textobjects = {
+                    select = {
+                        enable = false,
+                    },
+                },
             })
         end, 0)
     end,
