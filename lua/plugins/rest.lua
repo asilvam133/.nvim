@@ -1,5 +1,6 @@
 return {
     'rest-nvim/rest.nvim',
+    event = 'BufRead *.http',
     dependencies = {
         'nvim-treesitter/nvim-treesitter',
         opts = function(_, opts)
