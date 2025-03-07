@@ -7,10 +7,12 @@ return {
         ensure_installed = {
             'codelldb',
             'delve',
+            'dockerfile-language-server',
             'gofumpt',
             'goimports',
             'gomodifytags',
             'gopls',
+            'hadolint',
             'html-lsp',
             'impl',
             'json-lsp',
