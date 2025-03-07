@@ -94,5 +94,11 @@ return {
         end
         ---@diagnostic disable-next-line: different-requires
         require('cmp').setup(opts)
+        require('cmp').setup.filetype({ 'sql' }, {
+            sources = {
+                { name = 'vim-dadbod-completion' },
+                { name = 'buffer' },
+            },
+        })
     end,
 }
