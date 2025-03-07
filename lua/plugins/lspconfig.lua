@@ -6,12 +6,22 @@ return {
     },
     opts = {
         servers = {
+            dockerls = {},
             html = {},
             jsonls = {},
             gopls = {
+                filetypes = {
+                    'go',
+                    'gomod',
+                    'gowork',
+                    'gotmpl',
+                    'gohtmltmpl',
+                    'gotexttmpl',
+                },
                 settings = {
                     gopls = {
                         gofumpt = true,
+                        ['build.templateExtensions'] = { 'gohtml', 'html', 'gotmpl', 'tmpl' },
                         codelenses = {
                             gc_details = false,
                             generate = true,
@@ -117,6 +127,7 @@ return {
                 on_attach = on_attach,
                 capabilities = capabilities,
                 settings = server_opts.settings and server_opts.settings or {},
+                filetypes = (server_opts or {}).filetypes,
             })
         end
 
