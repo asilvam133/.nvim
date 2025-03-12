@@ -24,7 +24,7 @@ return {
             },
             sections = {
                 lualine_a = {
-                    { 'location', padding = { left = 1, right = 3 } },
+                    { 'location', padding = { left = 1, right = 6 } },
                 },
                 lualine_b = {},
                 lualine_c = {
