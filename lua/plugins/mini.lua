@@ -10,6 +10,10 @@ return {
                     a = '@function.outer',
                     i = '@function.inner',
                 }),
+                C = require('mini.ai').gen_spec.treesitter({
+                    a = '@class.outer',
+                    i = '@class.inner',
+                }),
             },
         })
         require('mini.surround').setup()
