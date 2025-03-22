@@ -54,6 +54,7 @@ return {
         priority = 1000,
         opts = {
             transparent = true,
+            keywordStyle = { italic = false },
             overrides = function(colors)
                 local theme = colors.theme
                 return {
@@ -133,6 +134,8 @@ return {
             },
             custom_highlights = function(_)
                 return {
+                    ['@module'] = { style = {} },
+                    Conditional = { style = {} },
                     TabLine = { bg = 'none' },
                     TabLineSel = { bg = 'none' },
                     TabLineFill = { bg = 'none' },
@@ -150,6 +153,9 @@ return {
         priority = 1000,
         opts = {
             transparent = true,
+            styles = {
+                keywords = { italic = false },
+            },
         },
     },
     {
