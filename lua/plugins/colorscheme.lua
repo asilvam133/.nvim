@@ -5,15 +5,14 @@ return {
         config = function()
             require('themery').setup({
                 themes = {
-                    { name = 'Catppuccin Mocha', colorscheme = 'catppuccin-mocha' },
+                    { name = 'Rose pine', colorscheme = 'rose-pine' },
+                    { name = 'Tokyonight-night', colorscheme = 'tokyonight-night' },
                     { name = 'Everforest', colorscheme = 'everforest' },
-                    { name = 'Github Dimmed', colorscheme = 'github_dark_dimmed' },
+                    { name = 'Catppuccin Mocha', colorscheme = 'catppuccin-mocha' },
                     { name = 'Kanagawa Dragon', colorscheme = 'kanagawa-dragon' },
                     { name = 'Kanagawa Wave', colorscheme = 'kanagawa-wave' },
                     { name = 'Neofusion', colorscheme = 'neofusion' },
-                    { name = 'Rose pine', colorscheme = 'rose-pine' },
-                    { name = 'Tokyonight-night', colorscheme = 'tokyonight-night' },
-                    { name = 'Tokyonight-moon', colorscheme = 'tokyonight-moon' },
+                    { name = 'Github Dimmed', colorscheme = 'github_dark_dimmed' },
                 },
                 livePreview = true,
                 makePersist = true,
