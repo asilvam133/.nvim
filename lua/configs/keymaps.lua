@@ -9,10 +9,14 @@ vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move selection one line d
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move selection one line up' })
 
 -- Yank/paste to/from system clipboard
+-- stylua: ignore start
 vim.keymap.set({ 'n', 'x' }, [["*y]], [["+y]], { desc = 'Yank selection to system clipboard' })
 vim.keymap.set({ 'n', 'x' }, [["*p]], [["+p]], { desc = 'Paste selection from system clipboard' })
 vim.keymap.set({ 'n', 'x' }, '<leader>y', [["+y]], { desc = 'Yank selection to system clipboard' })
 vim.keymap.set('x', '<leader>Y', [["+Y]], { desc = 'Yank rest of line to system clipboard' })
+vim.keymap.set({ 'n', 'x' }, '<leader>p', [["+p]], { desc = 'Paste selection from system clipboard (append)' })
+vim.keymap.set({ 'n', 'x' }, '<leader>P', [["+P]], { desc = 'Paste selection from system clipboard (prepend)' })
+-- stylua: ignore end
 
 -- Fix cursorline keybinding
 vim.keymap.set('n', 'zv', '<cmd>set cursorline!<cr>', { desc = 'Show cursor line' })
