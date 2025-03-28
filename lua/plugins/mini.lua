@@ -18,8 +18,5 @@ return {
         })
         require('mini.surround').setup()
         require('mini.splitjoin').setup()
-
-        -- appearance
-        require('mini.animate').setup()
     end,
 }
