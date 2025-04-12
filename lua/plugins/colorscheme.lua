@@ -9,10 +9,7 @@ return {
                     { name = 'Tokyonight-night', colorscheme = 'tokyonight-night' },
                     { name = 'Everforest', colorscheme = 'everforest' },
                     { name = 'Catppuccin Mocha', colorscheme = 'catppuccin-mocha' },
-                    { name = 'Kanagawa Dragon', colorscheme = 'kanagawa-dragon' },
-                    { name = 'Kanagawa Wave', colorscheme = 'kanagawa-wave' },
                     { name = 'Neofusion', colorscheme = 'neofusion' },
-                    { name = 'Github Dimmed', colorscheme = 'github_dark_dimmed' },
                 },
                 livePreview = true,
                 makePersist = true,
@@ -46,52 +43,6 @@ return {
         },
         config = function(_, opts)
             require('rose-pine').setup(opts)
-        end,
-    },
-    {
-        'rebelot/kanagawa.nvim',
-        lazy = false,
-        priority = 1000,
-        opts = {
-            transparent = true,
-            keywordStyle = { italic = false },
-            overrides = function(colors)
-                local theme = colors.theme
-                return {
-                    NormalFloat = { bg = 'none' },
-                    CursorLine = { bg = '#26233a' },
-                    ColorColumn = { bg = 'none' },
-                    FloatBorder = { bg = 'none' },
-                    FloatTitle = { bg = 'none' },
-                    NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
-                    TabLine = { bg = 'none' },
-                    TabLineFill = { bg = 'none' },
-                    LazyNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
-                    TelescopeTitle = { fg = theme.ui.special, bold = true },
-                    TelescopePromptNormal = { bg = theme.ui.bg_p1 },
-                    TelescopePromptBorder = { fg = theme.ui.bg_p1, bg = theme.ui.bg_p1 },
-                    TelescopeResultsNormal = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m1 },
-                    TelescopeResultsBorder = { fg = theme.ui.bg_m1, bg = theme.ui.bg_m1 },
-                    TelescopePreviewNormal = { bg = theme.ui.bg_dim },
-                    TelescopePreviewBorder = { bg = theme.ui.bg_dim, fg = theme.ui.bg_dim },
-                    Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 }, -- add `blend = vim.o.pumblend` to enable transparency
-                    PmenuSbar = { bg = theme.ui.bg_m1 },
-                    PmenuThumb = { bg = theme.ui.bg_p2 },
-                    ZenBg = { bg = 'none' },
-                }
-            end,
-            colors = {
-                theme = {
-                    all = {
-                        ui = {
-                            bg_gutter = 'none',
-                        },
-                    },
-                },
-            },
-        },
-        config = function(_, opts)
-            require('kanagawa').setup(opts)
         end,
     },
     {
@@ -204,17 +155,6 @@ return {
         config = function(_, opts)
             require('neofusion').setup(opts)
         end,
-    },
-    {
-        'projekt0n/github-nvim-theme',
-        name = 'github-theme',
-        lazy = false,
-        priority = 1000,
-        opts = {
-            options = {
-                transparent = true,
-            },
-        },
     },
     {
         'neanias/everforest-nvim',
