@@ -9,7 +9,6 @@ return {
                     { name = 'Tokyonight-night', colorscheme = 'tokyonight-night' },
                     { name = 'Everforest', colorscheme = 'everforest' },
                     { name = 'Catppuccin Mocha', colorscheme = 'catppuccin-mocha' },
-                    { name = 'Neofusion', colorscheme = 'neofusion' },
                 },
                 livePreview = true,
                 makePersist = true,
@@ -138,23 +137,6 @@ return {
                 }
             end,
         },
-    },
-    {
-        'diegoulloao/neofusion.nvim',
-        lazy = false,
-        priority = 1000,
-        opts = {
-            transparent_mode = true,
-            overrides = {
-                LineNr = { fg = '#fd5e3a' },
-                LineNrAbove = { fg = '#08435e' },
-                LineNrBelow = { fg = '#08435e' },
-                ZenBg = { bg = 'none' },
-            },
-        },
-        config = function(_, opts)
-            require('neofusion').setup(opts)
-        end,
     },
     {
         'neanias/everforest-nvim',
