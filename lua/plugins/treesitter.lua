@@ -32,6 +32,7 @@ return {
                     'markdown_inline',
                     'python',
                     'query',
+                    'requirements',
                     'ron',
                     'rust',
                     'scala',
