@@ -5,7 +5,9 @@ return {
     event = 'BufRead',
     opts = {
         ensure_installed = {
+            'black',
             'codelldb',
+            'debugpy',
             'delve',
             'dockerfile-language-server',
             'gofumpt',
@@ -18,6 +20,8 @@ return {
             'json-lsp',
             'lua-language-server',
             'marksman',
+            'pyright',
+            'ruff',
             'shfmt',
             'stylua',
             'taplo',
