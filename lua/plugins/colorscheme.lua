@@ -135,6 +135,18 @@ return {
                     bg = c.bg_dark,
                     fg = c.bg_dark,
                 }
+                hl.CursorLineSign = {
+                    fg = hl.Constant.fg,
+                }
+                hl.LineNr = {
+                    fg = hl.Constant.fg,
+                }
+                hl.LineNrAbove = {
+                    fg = '#737aa2',
+                }
+                hl.LineNrBelow = {
+                    fg = '#737aa2',
+                }
             end,
         },
     },
