@@ -22,6 +22,12 @@ return {
                         reverse_directories = false,
                     },
                 },
+                file_ignore_patterns = {
+                    -- scala
+                    'project',
+                    'target',
+                    -- end scala
+                },
             },
         }
     end,

@@ -8,6 +8,7 @@ return {
         servers = {
             dockerls = {},
             html = {},
+            jdtls = {},
             jsonls = {},
             gopls = {
                 filetypes = {
@@ -197,7 +198,7 @@ return {
                 )
                 vim.keymap.set(
                     'n',
-                    '<space>cn',
+                    '<space>cc',
                     vim.lsp.buf.rename,
                     { buffer = ev.buf, desc = 'Code rename' }
                 )

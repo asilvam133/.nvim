@@ -17,6 +17,7 @@ return {
             'hadolint',
             'html-lsp',
             'impl',
+            'jdtls',
             'json-lsp',
             'lua-language-server',
             'marksman',
