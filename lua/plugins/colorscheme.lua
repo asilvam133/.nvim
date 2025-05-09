@@ -26,7 +26,7 @@ return {
             styles = {
                 bold = true,
                 italic = false,
-                transparency = true,
+                transparency = false,
             },
             highlight_groups = {
                 ['@function.builtin.lua'] = { italic = false },
@@ -51,7 +51,7 @@ return {
         priority = 1000,
         opts = {
             flavour = 'mocha',
-            transparent_background = true,
+            transparent_background = false,
             integrations = {
                 fidget = true,
                 harpoon = true,
@@ -102,7 +102,7 @@ return {
         lazy = false,
         priority = 1000,
         opts = {
-            transparent = true,
+            transparent = false,
             styles = {
                 keywords = { italic = false },
             },
@@ -157,7 +157,7 @@ return {
         priority = 1000,
         opts = {
             background = 'hard',
-            transparent_background_level = 2,
+            transparent_background_level = 0,
         },
         config = function(_, opts)
             require('everforest').setup(opts)
