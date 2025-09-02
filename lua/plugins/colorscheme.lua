@@ -7,8 +7,9 @@ return {
                 themes = {
                     { name = 'Rose pine', colorscheme = 'rose-pine' },
                     { name = 'Tokyonight-night', colorscheme = 'tokyonight-night' },
-                    { name = 'Everforest', colorscheme = 'everforest' },
                     { name = 'Catppuccin Mocha', colorscheme = 'catppuccin-mocha' },
+                    { name = 'Everforest', colorscheme = 'everforest' },
+                    { name = 'Kanso', colorscheme = 'kanso-ink' },
                 },
                 livePreview = true,
                 makePersist = true,
@@ -162,5 +163,13 @@ return {
         config = function(_, opts)
             require('everforest').setup(opts)
         end,
+    },
+    {
+        'webhooked/kanso.nvim',
+        lazy = false,
+        priority = 1000,
+        opts = {
+            keywordStyle = { italic = false },
+        },
     },
 }
