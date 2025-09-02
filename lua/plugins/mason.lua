@@ -26,6 +26,7 @@ return {
             'shfmt',
             'stylua',
             'taplo',
+            'tflint',
             'yaml-language-server',
             'yamlfmt',
         },

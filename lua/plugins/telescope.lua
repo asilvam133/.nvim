@@ -24,7 +24,7 @@ return {
                 },
                 file_ignore_patterns = {
                     -- scala
-                    'project',
+                    -- 'project',
                     'target',
                     -- end scala
                 },

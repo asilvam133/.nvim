@@ -83,18 +83,40 @@ return {
                 },
             },
             marksman = {},
-            pyright = {},
-            ruff = {
+            pyright = {
                 settings = {
-                    cmd_env = { RUFF_TRACE = 'messages' },
-                    init_options = {
-                        settings = {
-                            logLevel = 'error',
+                    cmd = { 'pyright-langserver', '--stdio' },
+                    filetypes = { 'python' },
+                    root_markers = { 'pyproject.toml', '.git' },
+                    settings = {
+                        pyright = {
+                            disableOrganizeImports = true,
+                        },
+                        python = {
+                            analysis = {
+                                ignore = { '*' },
+                                diagnosticMode = 'off',
+                                typeCheckingMode = 'off',
+                            },
                         },
                     },
                 },
             },
+            ruff = {
+                settings = {
+                    format = {
+                        enable = false,
+                    },
+                    cmd = { 'ruff', 'server' },
+                    filetypes = { 'python' },
+                    root_markers = { 'pyproject.toml', 'ruff.toml', '.ruff.toml', '.git' },
+                    settings = {},
+                },
+            },
             taplo = {},
+            terraform_lsp = {
+                filetypes = { 'terraform', 'tf' },
+            },
             yamlls = {},
         },
     },
