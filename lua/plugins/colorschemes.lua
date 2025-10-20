@@ -6,14 +6,16 @@ return {
             require('themery').setup({
                 themes = {
                     { name = 'Rose pine', colorscheme = 'rose-pine' },
-                    { name = 'Tokyonight-night', colorscheme = 'tokyonight-night' },
+                    { name = 'Tokyonight Night', colorscheme = 'tokyonight-night' },
                     { name = 'Catppuccin Mocha', colorscheme = 'catppuccin-mocha' },
                     { name = 'Everforest', colorscheme = 'everforest' },
                     { name = 'Kanso', colorscheme = 'kanso-ink' },
                     { name = 'Gruvbox', colorscheme = 'gruvbox' },
+                    { name = 'Colorbuddy', colorscheme = 'gruvbuddy' },
                 },
                 livePreview = true,
                 makePersist = true,
+                initial_theme = 'Rose pine',
             })
         end,
         keys = {
@@ -21,16 +23,14 @@ return {
         },
     },
     {
-        'asilvam133/rose-pine.nvim',
+        'rose-pine/neovim',
         name = 'rose-pine',
         lazy = false,
         opts = {
             styles = {
-                bold = true,
                 transparency = true,
             },
             highlight_groups = {
-                Comment = { italic = true },
                 TabLine = { bg = 'none' },
                 TabLineSel = { bg = 'none' },
                 TabLineFill = { bg = 'none' },
@@ -82,5 +82,13 @@ return {
             background = 'dark',
             transparent_mode = true,
         },
+    },
+    {
+        'asilvam133/colorbuddy.nvim',
+        lazy = false,
+        priority = 1000,
+        config = function()
+            vim.cmd.colorscheme('gruvbuddy')
+        end,
     },
 }
