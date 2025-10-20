@@ -11,7 +11,6 @@ return {
                     { name = 'Everforest', colorscheme = 'everforest' },
                     { name = 'Kanso', colorscheme = 'kanso-ink' },
                     { name = 'Gruvbox', colorscheme = 'gruvbox' },
-                    { name = 'Colorbuddy', colorscheme = 'gruvbuddy' },
                 },
                 livePreview = true,
                 makePersist = true,
@@ -82,13 +81,5 @@ return {
             background = 'dark',
             transparent_mode = true,
         },
-    },
-    {
-        'asilvam133/colorbuddy.nvim',
-        lazy = false,
-        priority = 1000,
-        config = function()
-            vim.cmd.colorscheme('gruvbuddy')
-        end,
     },
 }
