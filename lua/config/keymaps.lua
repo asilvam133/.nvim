@@ -12,17 +12,8 @@ vim.keymap.set({ 'n', 'x' }, '<leader>p', [["+p]], { desc = 'Paste selection fro
 vim.keymap.set({ 'n', 'x' }, '<leader>P', [["+P]], { desc = 'Paste selection from system clipboard (prepend)' })
 -- stylua: ignore end
 
--- Pickers
-vim.keymap.del('n', '<leader><space>')
-vim.keymap.set('n', '<leader><space>', LazyVim.pick('files', { root = false }), { desc = 'Find Files (cwd)' })
-vim.keymap.del('n', '<leader>/')
-vim.keymap.set('n', '<leader>/', LazyVim.pick('live_grep', { root = false }), { desc = 'Grep (cwd)' })
-
 -- Diagnostics
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 
 -- Buffers
 vim.keymap.set('n', '<leader>bc', '<cmd>let @+=@%<cr>', { desc = 'Copy path (cwd)' })
-
--- Tabline
-vim.keymap.del('n', '<leader>uA')
