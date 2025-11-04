@@ -7,9 +7,9 @@ return {
                 themes = {
                     { name = 'Rose pine', colorscheme = 'rose-pine' },
                     { name = 'Tokyonight Night', colorscheme = 'tokyonight-night' },
-                    { name = 'Catppuccin Mocha', colorscheme = 'catppuccin-mocha' },
-                    { name = 'Everforest', colorscheme = 'everforest' },
+                    { name = 'Neofusion', colorscheme = 'neofusion' },
                     { name = 'Gruvbox', colorscheme = 'gruvbox' },
+                    { name = 'Kanagawa', colorscheme = 'kanagawa-wave' },
                 },
                 livePreview = true,
                 makePersist = true,
@@ -43,21 +43,6 @@ return {
         end,
     },
     {
-        'neanias/everforest-nvim',
-        version = false,
-        lazy = false,
-        priority = 1000,
-        opts = {
-            background = 'hard',
-            transparent_background_level = 2,
-            italics = false,
-            disable_italic_comments = true,
-        },
-        config = function(_, opts)
-            require('everforest').setup(opts)
-        end,
-    },
-    {
         'folke/tokyonight.nvim',
         opts = {
             transparent = true,
@@ -71,14 +56,6 @@ return {
         },
     },
     {
-        'catppuccin/nvim',
-        opts = {
-            flavour = 'mocha',
-            transparent_background = true,
-            no_italic = true,
-        },
-    },
-    {
         'ellisonleao/gruvbox.nvim',
         priority = 1000,
         opts = {
@@ -89,6 +66,41 @@ return {
                 comments = false,
                 operators = false,
             },
+        },
+    },
+    {
+        'rebelot/kanagawa.nvim',
+        opts = {
+            theme = 'wave',
+            transparent = true,
+            colors = {
+                theme = {
+                    all = {
+                        ui = {
+                            bg_gutter = 'none',
+                        },
+                    },
+                },
+            },
+            overrides = function(colors)
+                local theme = colors.theme
+                return {
+                    NormalFloat = { bg = 'none' },
+                    FloatBorder = { bg = 'none' },
+                    FloatTitle = { bg = 'none' },
+                    NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
+                    LazyNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
+                    MasonNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
+                }
+            end,
+        },
+    },
+    {
+        'diegoulloao/neofusion.nvim',
+        priority = 1000,
+        opts = {
+            transparent_mode = true,
+            inverse = false,
         },
     },
 }
