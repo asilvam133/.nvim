@@ -38,9 +38,6 @@ return {
                 },
             },
         },
-        config = function(_, opts)
-            require('rose-pine').setup(opts)
-        end,
     },
     {
         'folke/tokyonight.nvim',
@@ -101,6 +98,13 @@ return {
         opts = {
             transparent_mode = true,
             inverse = false,
+            italic = {
+                strings = false,
+                emphasis = false,
+                comments = false,
+                operators = false,
+                folds = false,
+            },
         },
     },
 }
