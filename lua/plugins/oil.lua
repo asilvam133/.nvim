@@ -5,7 +5,4 @@ return {
     ---@type oil.SetupOpts
     opts = {},
     dependencies = { { 'nvim-mini/mini.icons', opts = {} } },
-    keys = {
-        { '-', '<cmd>Oil<cr>', desc = 'Explorer' },
-    },
 }
