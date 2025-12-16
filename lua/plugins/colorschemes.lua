@@ -7,9 +7,7 @@ return {
                 themes = {
                     { name = 'Rose pine', colorscheme = 'rose-pine' },
                     { name = 'Tokyonight Night', colorscheme = 'tokyonight-night' },
-                    { name = 'Neofusion', colorscheme = 'neofusion' },
-                    { name = 'Gruvbox', colorscheme = 'gruvbox' },
-                    { name = 'Kanagawa', colorscheme = 'kanagawa-wave' },
+                    { name = 'Catppuccin', colorscheme = 'catppuccin-mocha' },
                 },
                 livePreview = true,
                 makePersist = true,
@@ -28,6 +26,9 @@ return {
             styles = {
                 transparency = true,
                 italic = false,
+            },
+            highlight_groups = {
+                FloatBorder = { fg = 'foam' },
             },
             palette = {
                 main = {
@@ -53,58 +54,11 @@ return {
         },
     },
     {
-        'ellisonleao/gruvbox.nvim',
+        'catppuccin/nvim',
+        name = 'catppuccin',
         priority = 1000,
         opts = {
-            background = 'dark',
-            transparent_mode = true,
-            italic = {
-                strings = false,
-                comments = false,
-                operators = false,
-            },
-        },
-    },
-    {
-        'rebelot/kanagawa.nvim',
-        opts = {
-            theme = 'wave',
-            transparent = true,
-            colors = {
-                theme = {
-                    all = {
-                        ui = {
-                            bg_gutter = 'none',
-                        },
-                    },
-                },
-            },
-            overrides = function(colors)
-                local theme = colors.theme
-                return {
-                    NormalFloat = { bg = 'none' },
-                    FloatBorder = { bg = 'none' },
-                    FloatTitle = { bg = 'none' },
-                    NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
-                    LazyNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
-                    MasonNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
-                }
-            end,
-        },
-    },
-    {
-        'diegoulloao/neofusion.nvim',
-        priority = 1000,
-        opts = {
-            transparent_mode = true,
-            inverse = false,
-            italic = {
-                strings = false,
-                emphasis = false,
-                comments = false,
-                operators = false,
-                folds = false,
-            },
+            transparent_background = true,
         },
     },
 }
