@@ -6,6 +6,7 @@
 -- stylua: ignore start
 vim.keymap.set({ 'n', 'x' }, [["*y]], [["+y]], { desc = 'Yank selection to system clipboard' })
 vim.keymap.set({ 'n', 'x' }, [["*p]], [["+p]], { desc = 'Paste selection from system clipboard' })
+vim.keymap.set({ 'n', 'x' }, [["*d]], [["+d]], { desc = 'Delete selection to system clipboard' })
 vim.keymap.set({ 'n', 'x' }, '<leader>y', [["+y]], { desc = 'Yank selection to system clipboard' })
 vim.keymap.set({ 'n', 'x' }, '<leader>Y', [["+Y]], { desc = 'Yank everything forward to system clipboard' })
 vim.keymap.set({ 'n', 'x' }, '<leader>p', [["+p]], { desc = 'Paste selection from system clipboard (append)' })
