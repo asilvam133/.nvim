@@ -5,14 +5,15 @@ return {
         config = function()
             require('themery').setup({
                 themes = {
-                    { name = 'Rose pine',        colorscheme = 'rose-pine' },
+                    { name = 'Rose pine', colorscheme = 'rose-pine-main' },
                     { name = 'Tokyonight Night', colorscheme = 'tokyonight-night' },
-                    { name = 'Catppuccin',       colorscheme = 'catppuccin-mocha' },
-                    { name = 'Nightfox',         colorscheme = 'nightfox' },
-                    { name = 'Duskfox',          colorscheme = 'duskfox' },
-                    { name = 'Nordfox',          colorscheme = 'nordfox' },
-                    { name = 'Carbonfox',        colorscheme = 'carbonfox' },
-                    { name = 'Terafox',          colorscheme = 'terafox' },
+                    { name = 'Catppuccin', colorscheme = 'catppuccin-mocha' },
+                    { name = 'Nightfox', colorscheme = 'nightfox' },
+                    { name = 'Duskfox', colorscheme = 'duskfox' },
+                    { name = 'Nordfox', colorscheme = 'nordfox' },
+                    { name = 'Carbonfox', colorscheme = 'carbonfox' },
+                    { name = 'Terafox', colorscheme = 'terafox' },
+                    { name = 'Rose pine (Light)', colorscheme = 'rose-pine-dawn' },
                 },
                 livePreview = true,
                 makePersist = true,
