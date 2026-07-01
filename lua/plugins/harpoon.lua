@@ -13,7 +13,7 @@ return {
                 desc = 'Harpoon: Show marks',
             },
             {
-                '<leader>a',
+                '<leader>n',
                 function()
                     harpoon:list():add()
                 end,
