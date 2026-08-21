@@ -22,9 +22,9 @@ return {
             },
         }
 
-        for k, v in pairs({ '+', '[', '{', '(', '&', '=', ')', '}', ']', '*' }) do
+        for k = 1, 9 do
             table.insert(keybinds, {
-                '<leader>' .. v,
+                '<leader>' .. k,
                 function()
                     harpoon:list():select(k)
                 end,
